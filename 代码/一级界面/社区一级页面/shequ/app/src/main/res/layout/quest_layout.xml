@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="8"
+            android:hint="请输入您所搜寻的内容"
+            android:textSize="18dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="2"
+            android:src="@android:drawable/ic_search_category_default"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_guanzhu2"
+            android:textSize="22dp"
+            android:textColor="#FFFFFF"
+            android:background="#3AD2BF"
+            android:text="关注"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_quest2"
+            android:textSize="22dp"
+            android:textColor="#FFFFFF"
+            android:background="#3AD2BF"
+            android:text="热门问题"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--热门问题页面-->
+    <LinearLayout
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/hot"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+            <TextView
+                android:layout_weight="10"
+                android:text="热门问题"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lv_questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
