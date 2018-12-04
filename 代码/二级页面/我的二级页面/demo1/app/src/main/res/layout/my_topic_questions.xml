@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_topic_qtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="LOGO要这样排，你的PPT不用愁。。。"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:paddingTop="4dp">
+            <FrameLayout
+                android:layout_width="45dp"
+                android:layout_height="45dp">
+                <ImageView
+                    android:id="@+id/iv_topic_head"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="3"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_launcher_background" />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/head" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp"
+                android:paddingTop="10dp"
+                android:gravity="right"
+                android:text="由"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_topic_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingLeft="4dp"
+                android:paddingTop="10dp"
+                android:text="孟凡刚"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingLeft="2dp"
+                android:paddingTop="10dp"
+                android:text="创建"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_topic_qnum"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="4"
+                android:text="32,124"
+                android:textSize="16dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="4"
+                android:text="人关注"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
