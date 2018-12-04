@@ -1,0 +1,282 @@
+[
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\msg.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\msg.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\comunicate.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\comunicate.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_dark.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fly.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\fly.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\home.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\stats.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\stats.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner.xml",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\shape_corner.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\select.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\select.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\job.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\job.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\corner_view.xml",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\corner_view.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_normal.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\home_normal.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\comunicate_normal.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\comunicate_normal.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dianzan2.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\dianzan2.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tooltip_frame_light.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\tooltip_frame_light.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\search_corner.xml",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\search_corner.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_divider_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_list_divider_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pic2.jpg",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\pic2.jpg"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\eco.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\eco.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\area.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\area.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_normal.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\my_normal.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\msg_normal.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\msg_normal.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\search.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\search.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\score.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\score.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\df123ae3420f27ee1ec4ab436c2693f4\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\learn.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\learn.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\banner1.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\banner1.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\df123ae3420f27ee1ec4ab436c2693f4\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\df123ae3420f27ee1ec4ab436c2693f4\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\df123ae3420f27ee1ec4ab436c2693f4\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\school.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\school.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\my.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jobs.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\jobs.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dianzan.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\dianzan.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\return1.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\return1.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logo.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\logo.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hot.png",
+        "source": "D:\\WorkSpace\\demo1\\app\\src\\main\\res\\drawable\\hot.png"
+    },
+    {
+        "merged": "D:\\WorkSpace\\demo1\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\小妞\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\67f28c79767d079e4a295a0c56aa0bd1\\res\\drawable\\abc_item_background_holo_light.xml"
+    }
+]
