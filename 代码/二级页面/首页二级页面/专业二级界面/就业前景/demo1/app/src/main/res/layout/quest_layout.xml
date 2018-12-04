@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="600dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:background="@drawable/search_corner">
+            <ImageView
+                android:src="@drawable/search"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:background="@null"
+                android:hint="Search"
+                android:textSize="14dp"
+                android:layout_width="230dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="| 提问"
+                android:textColor="#a3a3a3"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="70dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>-->
+
+    <!--热门问题页面-->
+    <LinearLayout
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/hot"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+            <TextView
+                android:layout_weight="10"
+                android:text="热门问题"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lv_questions"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
