@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.celia.demo1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:icon="@mipmap/logo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".zixun.ZiXun2"/>
+        <activity android:name=".zixun.ZiXun3"/>
+        <activity android:name=".my.MyUser"/>
+        <activity android:name=".index.paiming"/>
+        <activity android:name=".index.HotMajor"/>
+        <activity android:name=".index.PaimingSchool"/>
+        <activity android:name=".index.Derection"/>
+        <activity android:name=".index.Select"/>
+    </application>
+
+</manifest>

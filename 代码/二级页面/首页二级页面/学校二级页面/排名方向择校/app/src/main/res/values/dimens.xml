@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tubiao">45dp</dimen>
+    <dimen name="tubiaomargin">20dp</dimen>
+    <dimen name="tubiaomarginTB">10dp</dimen>
+    <dimen name="indextext">16dp</dimen>
+    <dimen name="mytext">16dp</dimen>
+    <dimen name="daohang">20dp</dimen>
+    <dimen name="biaoti">50dp</dimen>
+</resources>

@@ -1,0 +1,190 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\ea9ddeb906a8056a36d6fd13459fc07e\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bfb70affe9cab2432b665a0342bc1076\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\45f9852113e1f053fde3019d77873081\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\81bd1d7c53778efb3b0be6263023171e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\46a7b780b10b80cb8348a5fa310057ec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\38ef8a36666cf9c2739e8bc5a17b51c7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ece932db28410995b56e39683429a54e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7601d73ac2350cfe0ca8f13bbe9f069e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c739a2775a8875fd0b88993200e4dd05\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3ddab877bac1edd669da998647bec87d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2f532130f37e1597ec9ea79c1dc716fb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\b031bdc1158a2ff1f068847e1fe3f593\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bac37a8d30329eb203f4d5eb9ee78f40\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a732dececd536139eb4fe1f609a01aad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\58cf1a07aa9023cd63700ff559a5e946\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\28a99bec5c1c0eede44e47f1784652be\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\77f905ba4e0bc93e3b130d34ea8d5549\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9d796b4e676f426d5d6eae45721668a1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3b6d61ffd16d8e868b45c51351692b28\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c908d9ff798a4f3545ec3fa5896c08f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7b425fc96a7a9b6ecdd7c9e3a2691c54\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a6d653c5b50c0ee38f119972b89b044c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7afada67a475998cdf4d34ca3b92eeb1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5bb10e9434a705c5c1947649d378bad9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\4fb3c3a127d08f6fa67f63ff60983582\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\09c169a84a7daf5ab2afb40b4da5bbf7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b7c486745a07868b8f9365670d93d437\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\979f30fa3dbf1b1cfa0ae69d3d11ec4f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\34e7eb29e30852e187c61f7213c10456\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\202f60a41416cfd806f274fd85c6a9e2\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:5:5-25:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\ea9ddeb906a8056a36d6fd13459fc07e\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\ea9ddeb906a8056a36d6fd13459fc07e\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\45f9852113e1f053fde3019d77873081\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\45f9852113e1f053fde3019d77873081\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3b6d61ffd16d8e868b45c51351692b28\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3b6d61ffd16d8e868b45c51351692b28\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:7:9-36
+	android:allowBackup
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.celia.demo1.MainActivity
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:12:9-19:20
+	android:icon
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:13:13-40
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:17:27-74
+activity#com.example.celia.demo1.zixun.ZiXun2
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:20:9-49
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:20:19-47
+activity#com.example.celia.demo1.zixun.ZiXun3
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:21:9-49
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:21:19-47
+activity#com.example.celia.demo1.my.MyUser
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:22:9-46
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:22:19-44
+activity#com.example.celia.demo1.index.paiming
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:23:9-50
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:23:19-48
+activity#com.example.celia.demo1.index.HotMajor
+ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:24:9-51
+	android:name
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml:24:19-49
+uses-sdk
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\ea9ddeb906a8056a36d6fd13459fc07e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\ea9ddeb906a8056a36d6fd13459fc07e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bfb70affe9cab2432b665a0342bc1076\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bfb70affe9cab2432b665a0342bc1076\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\45f9852113e1f053fde3019d77873081\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\45f9852113e1f053fde3019d77873081\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\81bd1d7c53778efb3b0be6263023171e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\81bd1d7c53778efb3b0be6263023171e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\46a7b780b10b80cb8348a5fa310057ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\46a7b780b10b80cb8348a5fa310057ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\38ef8a36666cf9c2739e8bc5a17b51c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\38ef8a36666cf9c2739e8bc5a17b51c7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ece932db28410995b56e39683429a54e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\ece932db28410995b56e39683429a54e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7601d73ac2350cfe0ca8f13bbe9f069e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7601d73ac2350cfe0ca8f13bbe9f069e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c739a2775a8875fd0b88993200e4dd05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\c739a2775a8875fd0b88993200e4dd05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3ddab877bac1edd669da998647bec87d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\3ddab877bac1edd669da998647bec87d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2f532130f37e1597ec9ea79c1dc716fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\2f532130f37e1597ec9ea79c1dc716fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\b031bdc1158a2ff1f068847e1fe3f593\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\b031bdc1158a2ff1f068847e1fe3f593\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bac37a8d30329eb203f4d5eb9ee78f40\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bac37a8d30329eb203f4d5eb9ee78f40\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a732dececd536139eb4fe1f609a01aad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a732dececd536139eb4fe1f609a01aad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\58cf1a07aa9023cd63700ff559a5e946\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\58cf1a07aa9023cd63700ff559a5e946\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\28a99bec5c1c0eede44e47f1784652be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\28a99bec5c1c0eede44e47f1784652be\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\77f905ba4e0bc93e3b130d34ea8d5549\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\77f905ba4e0bc93e3b130d34ea8d5549\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9d796b4e676f426d5d6eae45721668a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9d796b4e676f426d5d6eae45721668a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c53e4da991eb023fc8ce99aebf4d22df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3b6d61ffd16d8e868b45c51351692b28\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3b6d61ffd16d8e868b45c51351692b28\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c908d9ff798a4f3545ec3fa5896c08f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c908d9ff798a4f3545ec3fa5896c08f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7b425fc96a7a9b6ecdd7c9e3a2691c54\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7b425fc96a7a9b6ecdd7c9e3a2691c54\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a6d653c5b50c0ee38f119972b89b044c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\a6d653c5b50c0ee38f119972b89b044c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7afada67a475998cdf4d34ca3b92eeb1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\7afada67a475998cdf4d34ca3b92eeb1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5bb10e9434a705c5c1947649d378bad9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5bb10e9434a705c5c1947649d378bad9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\4fb3c3a127d08f6fa67f63ff60983582\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\4fb3c3a127d08f6fa67f63ff60983582\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\09c169a84a7daf5ab2afb40b4da5bbf7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\09c169a84a7daf5ab2afb40b4da5bbf7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b7c486745a07868b8f9365670d93d437\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b7c486745a07868b8f9365670d93d437\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\979f30fa3dbf1b1cfa0ae69d3d11ec4f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\979f30fa3dbf1b1cfa0ae69d3d11ec4f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\34e7eb29e30852e187c61f7213c10456\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\34e7eb29e30852e187c61f7213c10456\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\202f60a41416cfd806f274fd85c6a9e2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\celia\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\202f60a41416cfd806f274fd85c6a9e2\AndroidManifest.xml:20:5-44
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		ADDED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\class\Android\demo1\app\src\main\AndroidManifest.xml

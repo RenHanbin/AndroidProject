@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_height="50dp"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#3ac9bf">
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/return1"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/transparent"
+            android:textStyle="bold"
+            android:textSize="@dimen/daohang"
+            android:text="热门专业"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_corner">
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/search"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp" />
+                <EditText
+                    android:background="@null"
+                    android:hint="Search"
+                    android:textSize="14dp"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/iv_search"
+                    android:text="| 提问"
+                    android:textColor="#a3a3a3"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <ListView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/list_item"/>
+
+    </LinearLayout>
+</LinearLayout>
+
