@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+android:layout_width="match_parent"
+android:orientation="vertical"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<!--搜索框-->
+<LinearLayout
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:background="@drawable/search_corner">
+        <ImageView
+            android:src="@drawable/search"
+            android:layout_width="30dp"
+            android:layout_height="40dp" />
+        <EditText
+            android:background="@null"
+            android:hint="Search"
+            android:textSize="14dp"
+            android:layout_width="230dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/iv_search"
+            android:text="| 提问"
+            android:textColor="#a3a3a3"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_width="70dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/tabhost">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--标签选项卡-->
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs"
+                android:layout_alignParentTop="true"/>
+            <!--FrameLayout作为TabHost中选项卡页面的展示容器-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@android:id/tabs"
+                android:id="@android:id/tabcontent">
+                <!--关注页面-->
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ListView
+                        android:id="@+id/lv_guanzhu"
+                        android:layout_width="match_parent"
+                        android:layout_height="448dp"/>
+                </LinearLayout>
+                <!--热门问题页面-->
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:paddingTop="4dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_weight="1"
+                            android:src="@drawable/hot"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp" />
+                        <TextView
+                            android:layout_weight="10"
+                            android:text="热门问题"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp" />
+                    </LinearLayout>
+                    <ListView
+                        android:id="@+id/lv_questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="448dp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+</LinearLayout>
+</LinearLayout>
+

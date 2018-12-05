@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--标题-->
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/themeColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/biaoti"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="-4dp"
+            android:textColor="@color/transparent"
+            android:textStyle="bold"
+            android:text="返回"
+            android:textSize="@dimen/daohang"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/transparent"
+            android:textStyle="bold"
+            android:textSize="@dimen/daohang"
+            android:text="排名一览"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.v4.app.FragmentTabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/tabhost">
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs"
+            android:layout_gravity="top"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>
