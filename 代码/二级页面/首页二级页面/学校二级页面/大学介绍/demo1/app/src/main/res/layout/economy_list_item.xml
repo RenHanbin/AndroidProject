@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="city"
+        android:textSize="16dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/gdp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="dgp"
+        android:textSize="16dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="amount"
+        android:textSize="16dp"
+        android:gravity="center"/>
+</LinearLayout>
+
