@@ -184,8 +184,8 @@ public class paiming extends AppCompatActivity {
         }
         @Override
         protected List<Major> doInBackground(String... strings) {
-            /*String urlStr = "http://10.7.88.251:8080/go2school/MajorServlet?remark=getMajorLearnList";*/
-            String urlStr = "http://192.168.43.59:8080/go2school/MajorServlet?remark=getMajorLearnList";
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"MajorServlet?remark=getMajorLearnList";
             try {
                 URL url = new URL(urlStr);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -241,8 +241,8 @@ public class paiming extends AppCompatActivity {
         }
         @Override
         protected List<Major> doInBackground(String... strings) {
-            /*String urlStr = "http://10.7.88.251:8080/go2school/MajorServlet?remark=getMajorOutList";*/
-            String urlStr = "http://192.168.43.59:8080/go2school/MajorServlet?remark=getMajorOutList";
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"MajorServlet?remark=getMajorOutList";
             try {
                 URL url = new URL(urlStr);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -298,8 +298,8 @@ public class paiming extends AppCompatActivity {
         }
         @Override
         protected List<Major> doInBackground(String... strings) {
-            /*String urlStr = "http://10.7.88.251:8080/go2school/MajorServlet?remark=getMajorWorkList";*/
-            String urlStr = "http://192.168.43.59:8080/go2school/MajorServlet?remark=getMajorWorkList";
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"MajorServlet?remark=getMajorWorkList";
             try {
                 URL url = new URL(urlStr);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();

@@ -106,5 +106,5 @@
         android:id="@+id/lv_list_shequ_question"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="5dp"/>
 </LinearLayout>

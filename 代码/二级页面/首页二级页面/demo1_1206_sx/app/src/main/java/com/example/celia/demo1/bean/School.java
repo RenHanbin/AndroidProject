@@ -11,7 +11,14 @@ public class School {
     private String schoolNum;
     private int schoolTypeId;
     private String schoolBestMajor;
+    private String salary;
 
+    public String getSalary() {
+        return salary;
+    }
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
     public String getCityName() {
         return cityName;
     }
@@ -74,7 +81,7 @@ public class School {
     }
 
     public School(int schoolId, String schoolName, int schoolRank, int cityId, String cityName, String schoolImg,
-                      String schoolContent, String schoolNum, int schoolTypeId, String schoolBestMajor) {
+                      String schoolContent, String schoolNum, int schoolTypeId, String schoolBestMajor, String salary) {
         super();
         this.schoolId = schoolId;
         this.schoolName = schoolName;
@@ -86,6 +93,7 @@ public class School {
         this.schoolNum = schoolNum;
         this.schoolTypeId = schoolTypeId;
         this.schoolBestMajor = schoolBestMajor;
+        this.salary = salary;
     }
     public School() {
         super();

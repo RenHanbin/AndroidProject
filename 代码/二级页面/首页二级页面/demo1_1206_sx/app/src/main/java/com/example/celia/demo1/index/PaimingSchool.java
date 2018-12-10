@@ -141,8 +141,8 @@ public class PaimingSchool extends AppCompatActivity {
         }
         @Override
         protected List<School> doInBackground(String... strings) {
-            //String urlStr = "http://10.7.88.251:8080/go2school/SchoolServlet?schoolMark=getSchoolPaiList";
-            String urlStr = "http://192.168.43.59:8080/go2school/SchoolServlet?schoolMark=getSchoolPaiList";
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+ "SchoolServlet?schoolMark=getSchoolPaiList";
             try {
                 URL url = new URL(urlStr);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -197,9 +197,8 @@ public class PaimingSchool extends AppCompatActivity {
         protected List<School> doInBackground(String... strings) {
 
             String name = String.valueOf(comment.getText());
-            /*String urlStr = "http://10.7.88.251:8080/go2school/SchoolServlet?schoolMark=getSchoolPaiListByName&name="
-                    +name;*/
-            String urlStr = "http://192.168.43.59:8080/go2school/SchoolServlet?schoolMark=getSchoolPaiListByName&name="
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"SchoolServlet?schoolMark=getSchoolPaiListByName&name="
                     +name;
             try {
                 URL url = new URL(urlStr);
@@ -240,4 +239,5 @@ public class PaimingSchool extends AppCompatActivity {
         }
 
     }
+
 }

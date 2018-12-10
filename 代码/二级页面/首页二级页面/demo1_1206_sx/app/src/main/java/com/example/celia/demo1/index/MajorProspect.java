@@ -123,8 +123,8 @@ public class MajorProspect extends AppCompatActivity{
         }
         @Override
         protected List<Major> doInBackground(String... strings) {
-            /*String urlStr = "http://10.7.88.251:8080/go2school/MajorServlet?remark=getMajorList";*/
-            String urlStr = "http://192.168.43.59:8080/go2school/MajorServlet?remark=getMajorList";
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"MajorServlet?remark=getMajorList";
 
             try {
                 URL url = new URL(urlStr);

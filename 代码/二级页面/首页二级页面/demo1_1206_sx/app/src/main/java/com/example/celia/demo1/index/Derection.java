@@ -2,13 +2,16 @@ package com.example.celia.demo1.index;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -18,7 +21,20 @@ import android.widget.TextView;
 
 import com.example.celia.demo1.MainActivity;
 import com.example.celia.demo1.R;
+import com.example.celia.demo1.bean.School;
+import com.example.celia.demo1.bean.Work;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +44,12 @@ public class Derection extends AppCompatActivity{
     private ImageView iv_return;
     private Spinner spinner;
     private ListView listView;
-    private List<Map<String,String>> datalist;
+    private List<School> datalist;
+    private List<String> worklist;
+    private ArrayAdapter<String> adapter;
+    private DAdapter Dadapter;
+    private TextView textView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,41 +70,40 @@ public class Derection extends AppCompatActivity{
 
         //下拉列表
         spinner = findViewById(R.id.spinner1);
-        String[] mItems = getResources().getStringArray(R.array.derections);
-        // 建立Adapter并且绑定数据源
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.spinner_item, mItems);
-        //绑定 Adapter到控件
-        spinner.setAdapter(adapter);
+        GetWorkAsyncTask asyncTask = new GetWorkAsyncTask(Derection.this);
+        asyncTask.execute();
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                textView = view.findViewById(R.id.tv_spinner);
+                GetWorkListAsyncTask asyncTask1 = new GetWorkListAsyncTask(Derection.this,listView);
+                asyncTask1.execute();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         //列表
         listView = findViewById(R.id.lv_list);
         initData();
-        DAdapter Dadapter = new DAdapter(this,R.layout.derection_layout,datalist);
-        listView.setAdapter(Dadapter);
     }
 
     private void initData() {
-        String[] work = {"1","2", "3","4","5","6","7", "8","9","10"};
-        String[] school = {"清华大学","浙江大学","北京大学","上海交通大学","复旦大学","南京大学","武汉大学","四川大学","中山大学","华中科技大学"};
-        String[] area = {"北京","浙江·杭州","北京","上海","上海","江苏·南京","湖北·武汉","四川·成都","广东·广州","湖北·武汉"};
-        datalist = new ArrayList<Map<String,String>>();
-        for (int i = 0; i < school.length; i++) {
-            Map<String, String> map = new HashMap<String, String>();
-            map.put("school", school[i]);
-            map.put("area",area[i]);
-            map.put("work",work[i]);
-            datalist.add(map);
-        }
+        GetListAsyncTask asyncTask=new GetListAsyncTask(Derection.this,listView);
+        asyncTask.execute();
     }
 
     private class DAdapter extends BaseAdapter {
 
         private Context context;
         private int itemLayoutID;
-        private List<Map<String,String>> datalist;
+        private List<School> datalist;
         public DAdapter(Context context,
                         int itemLayoutID,
-                        List<Map<String,String>>datalist){
+                        List<School>datalist){
             this.context = context;
             this.itemLayoutID = itemLayoutID;
             this.datalist = datalist;
@@ -113,11 +133,175 @@ public class Derection extends AppCompatActivity{
             TextView work = convertView.findViewById(R.id.tv_work);
             TextView school = convertView.findViewById(R.id.tv_school);
             TextView area = convertView.findViewById(R.id.tv_area);
-            Map<String, String> map = datalist.get(position);
-            work.setText((String)map.get("work"));
-            school.setText((String)map.get("school"));
-            area.setText((String)map.get("area"));
+            School schools = datalist.get(position);
+            work.setText(schools.getSalary()+" %");
+            school.setText(schools.getSchoolName());
+            area.setText(schools.getCityName());
             return convertView;
         }
+    }
+
+    //下拉列表
+    class GetWorkAsyncTask extends AsyncTask<String,Void,List<String>>{
+
+        private Context mContext;
+
+        public GetWorkAsyncTask(Context mContext){
+            this.mContext=mContext;
+        }
+        @Override
+        protected List<String> doInBackground(String... strings) {
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+ "WorkServlet?workMark=getWorkList";
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                worklist = new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    Work work = new Work();
+                    work.setWorkId(object1.getInt("workId"));
+                    work.setWorkName(object1.getString("workName"));
+                    worklist.add(work.getWorkName());
+                }
+                Log.e("test", worklist.toString());
+                return worklist;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<String> strings) {
+            Log.e("test","已经进行到异步类的显示阶段");
+            adapter=new ArrayAdapter<String>(mContext,R.layout.spinner_item, strings);
+            spinner.setAdapter(adapter);
+        }
+    }
+
+    //数据
+    class GetListAsyncTask extends AsyncTask<String,Void,List<School>> {
+
+        private Context mContext;
+        private ListView listView;
+
+        public GetListAsyncTask(Context mContext,ListView listView){
+            this.mContext=mContext;
+            this.listView=listView;
+        }
+        @Override
+        protected List<School> doInBackground(String... strings) {
+
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"SchoolServlet?schoolMark=getSchoolWorkList";
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                datalist=new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    School school = new School();
+                    school.setSchoolName(object1.getString("schoolName"));
+                    school.setCityName(object1.getString("cityName"));
+                    school.setSalary(object1.getString("salary"));
+                    datalist.add(school);
+                }
+                Log.e("test", datalist.toString());
+                return datalist;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<School> result){
+            Log.e("test","已经进行到异步类的显示阶段");
+            Dadapter = new DAdapter(mContext,R.layout.derection_layout,result);
+            listView.setAdapter(Dadapter);
+        }
+
+    }
+
+    //筛选
+    class GetWorkListAsyncTask extends AsyncTask<String,Void,List<School>> {
+
+        private Context mContext;
+        private ListView listView;
+
+        public GetWorkListAsyncTask(Context mContext,ListView listView){
+            this.mContext=mContext;
+            this.listView=listView;
+        }
+        @Override
+        protected List<School> doInBackground(String... strings) {
+            String workName = (String) textView.getText();
+            Log.e("workName",workName);
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path+"SchoolServlet?schoolMark=getSchoolWorkListByWorkId&workName="+workName;
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                datalist=new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    School school = new School();
+                    school.setSchoolName(object1.getString("schoolName"));
+                    school.setCityName(object1.getString("cityName"));
+                    school.setSalary(object1.getString("salary"));
+                    datalist.add(school);
+                }
+                Log.e("test", datalist.toString());
+                return datalist;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(List<School> result){
+            Log.e("test","已经进行到异步类的显示阶段");
+            Dadapter = new DAdapter(mContext,R.layout.derection_layout,result);
+            listView.setAdapter(Dadapter);
+        }
+
     }
 }
