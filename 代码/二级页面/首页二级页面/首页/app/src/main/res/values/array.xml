@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="derections">
+            <item>哲学</item>
+            <item>经济学 </item>
+            <item>法学</item>
+            <item>教育学</item>
+            <item>文学</item>
+            <item>历史学 </item>
+            <item>理学</item>
+            <item>工学</item>
+            <item>农学</item>
+            <item>医学 </item>
+            <item>管理学</item>
+            <item>艺术学</item>
+        </string-array>
+</resources>

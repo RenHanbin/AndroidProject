@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <FrameLayout android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="3.5">
+            <ImageView
+                android:id="@+id/iv_scho"
+                android:paddingTop="7dp"
+                android:layout_width="78dp"
+                android:layout_height="75dp"
+                android:layout_weight="3"
+                android:src="@drawable/ic_launcher_background" />
+            <ImageView
+                android:src="@drawable/head"
+                android:layout_width="80dp"
+                android:layout_height="85dp" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_school_name"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/themeColor"
+                android:text="清华大学"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_level"
+                android:textStyle="bold"
+                android:text="本科"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_grade"
+                android:textSize="18dp"
+                android:text="2018年最低录取分数线"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:paddingLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/delete"
+            android:layout_width="0dp"
+            android:layout_height="27dp" />
+    </LinearLayout>
+</LinearLayout>

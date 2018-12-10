@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="600dp"
+    android:layout_width="match_parent"
+    android:fillViewport="false"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:src="@drawable/banner1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+
+        <!--高考新资讯-->
+
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_gaokao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="高考新资讯 >>"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_zhuanlan"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="5dp"
+                android:text="专栏"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <RelativeLayout android:layout_height="110dp"
+                    android:layout_width="250dp">
+
+                    <TextView
+                        android:id="@+id/tv_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="  《歌手》突围赛：姜还是老的辣 老歌唱出新高度"
+                        android:textSize="18dp"
+                        android:paddingLeft="8dp"/>
+                    <TextView
+                        android:layout_below="@+id/tv_news"
+                        android:id="@+id/tv_read"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="阅读 1234234人"
+                        android:textSize="15dp"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_first"
+                    android:layout_height="110dp"
+                    android:layout_width="134dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <RelativeLayout android:layout_height="110dp"
+                    android:layout_width="250dp">
+
+                    <TextView
+                        android:id="@+id/tv_news2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="  《歌手》突围赛：姜还是老的辣 老歌唱出新高度"
+                        android:textSize="18dp"
+                        android:paddingLeft="8dp"/>
+                    <TextView
+                        android:layout_below="@+id/tv_news2"
+                        android:id="@+id/tv_read2"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="阅读 1234234人"
+                        android:textSize="15dp"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_second"
+                    android:layout_height="110dp"
+                    android:layout_width="134dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <RelativeLayout android:layout_height="110dp"
+                    android:layout_width="250dp">
+
+                    <TextView
+                        android:id="@+id/tv_news3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="  《歌手》突围赛：姜还是老的辣 老歌唱出新高度"
+                        android:textSize="18dp"
+                        android:paddingLeft="8dp"/>
+                    <TextView
+                        android:layout_below="@+id/tv_news3"
+                        android:id="@+id/tv_read3"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="阅读 1234234人"
+                        android:textSize="15dp"/>
+                </RelativeLayout>
+                <ImageView
+                    android:id="@+id/iv_third"
+                    android:layout_height="110dp"
+                    android:layout_width="134dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+        <!--学长学姐有话说-->
+        <TextView
+            android:id="@+id/tv_sister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="学长学姐有话说 >>"
+            android:paddingLeft="16dp"
+            android:textSize="20dp"/>
+
+        <TableLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="135dp"
+                    android:layout_height="245dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_left"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_speak"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="3dp"
+                        android:text="你说什么我都不知道不知道哦啊不知都不知道"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/iv_touxiang"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/pic2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="小茗同学"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:src="@drawable/dianzan"
+                            android:id="@+id/iv_dianzan"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="143"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="119dp"
+                    android:layout_height="245dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_center"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_speak2"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="你说什么我都不知道不知道哦啊不知都不知道"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/iv_touxiang2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/pic2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="小茗同学"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:src="@drawable/dianzan"
+                            android:id="@+id/iv_dianzan2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginTop="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="143"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="245dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_right"
+                        android:layout_width="110dp"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_speak3"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="你说什么我都不知道不知道哦啊不知都不知道"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/iv_touxiang3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/pic2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="小茗同学"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:src="@drawable/dianzan"
+                            android:id="@+id/iv_dianzan3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="-3dp"
+                            android:layout_marginTop="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="143"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
