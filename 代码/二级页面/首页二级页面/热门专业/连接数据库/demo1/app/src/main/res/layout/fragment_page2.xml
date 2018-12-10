@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--搜索框-->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:background="@drawable/search_corner">
+            <ImageView
+                android:src="@drawable/search"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <EditText
+                android:background="@null"
+                android:hint="Search"
+                android:textSize="14dp"
+                android:layout_width="230dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/iv_search"
+                android:text="| 提问"
+                android:textColor="#a3a3a3"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_width="70dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        app:tabSelectedTextColor="@color/themeColor"
+        app:tabIndicatorColor="@color/themeColor"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:id="@+id/Tab">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
