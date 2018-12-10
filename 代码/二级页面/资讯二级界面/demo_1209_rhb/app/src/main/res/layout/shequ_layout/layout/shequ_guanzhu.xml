@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3ac9bf"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_gravity="center"
+            android:src="@drawable/return1"
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:text="正文"
+            android:paddingRight="30dp"
+            android:textColor="#fff"
+            android:textSize="@dimen/daohang"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/threepoint1"
+            android:layout_width="25dp"
+            android:layout_height="23dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="3">
+            <ImageView
+                android:id="@+id/iv_head"
+                android:paddingLeft="1dp"
+                android:paddingTop="7dp"
+                android:layout_width="78dp"
+                android:layout_height="75dp"
+                android:layout_weight="3"
+                android:src="@drawable/ic_launcher_background" />
+            <ImageView
+                android:src="@drawable/head"
+                android:layout_width="80dp"
+                android:layout_height="85dp" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:textSize="20dp"
+                android:text="张晓晓"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:textSize="16dp"
+                android:text="12-32 20:20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_atten"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/star_corner"
+            android:text="取消关注"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="孩子成绩380-530之间能上哪所大学？近三年各省高考分数线汇总！"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_nei"
+                android:textSize="20dp"
+                android:text="高考作为中国千万学子改变命运的转折点，很多家长对于自己的孩子特别关心，那么平时成绩在400左右，能上什么样的大学呢？平时成绩380-530之间能上什么样的大学？"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_image"
+                android:src="@drawable/p3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+            <ImageView
+                android:id="@+id/iv_adv"
+                android:src="@drawable/p1"
+                android:layout_width="400dp"
+                android:layout_height="300dp" />
+            <LinearLayout
+                android:background="#cccccc"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_cnum"
+                    android:paddingLeft="10dp"
+                    android:text="67"
+                    android:textSize="18dp"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingLeft="3dp"
+                    android:text="条评论"
+                    android:textSize="18dp"
+                    android:layout_weight="15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:text="查看更多评论>>"
+                    android:textSize="18dp"
+                    android:layout_weight="15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="#cccccc"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <ListView
+                android:id="@+id/lv_shequ_guanzhu"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"/>
+        </LinearLayout>
+    </ScrollView>
+        <LinearLayout
+            android:paddingTop="3dp"
+            android:background="#fff"
+            android:paddingBottom="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/forwordgrey"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textSize="20dp"
+                android:text="322"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/commgrey"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="4dp"
+                android:textSize="20dp"
+                android:text="322"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/stargrey"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textSize="20dp"
+                android:text="322"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/ggrey"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="34dp" />
+            <TextView
+                android:layout_marginTop="4dp"
+                android:textSize="20dp"
+                android:text="322"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

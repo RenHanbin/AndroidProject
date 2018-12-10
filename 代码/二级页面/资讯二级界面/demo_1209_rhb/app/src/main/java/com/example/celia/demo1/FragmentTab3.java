@@ -98,14 +98,7 @@ public class FragmentTab3 extends Fragment {
         });
 
 
-        final ImageView imdianzan=(ImageView)view.findViewById(R.id.iv_dianzan);
-        imdianzan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(v == imdianzan)
-                    imdianzan.setImageDrawable(getResources().getDrawable(R.drawable.dianzan2));
-            }
-        });
+
 //               final ImageView imdianzan2=(ImageView)view.findViewById(R.id.iv_dianzan2);
 //        imdianzan.setOnClickListener(new View.OnClickListener() {
 //            @Override
