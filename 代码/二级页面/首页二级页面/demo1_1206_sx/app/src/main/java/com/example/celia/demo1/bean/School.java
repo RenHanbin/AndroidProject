@@ -12,7 +12,28 @@ public class School {
     private int schoolTypeId;
     private String schoolBestMajor;
     private String salary;
+    private String need;
+    private String low_grade;
+    private int low_rank;
 
+    public String getNeed() {
+        return need;
+    }
+    public void setNeed(String need) {
+        this.need = need;
+    }
+    public String getLow_grade() {
+        return low_grade;
+    }
+    public void setLow_grade(String low_grade) {
+        this.low_grade = low_grade;
+    }
+    public int getLow_rank() {
+        return low_rank;
+    }
+    public void setLow_rank(int low_rank) {
+        this.low_rank = low_rank;
+    }
     public String getSalary() {
         return salary;
     }
@@ -80,21 +101,7 @@ public class School {
         this.schoolBestMajor = schoolBestMajor;
     }
 
-    public School(int schoolId, String schoolName, int schoolRank, int cityId, String cityName, String schoolImg,
-                      String schoolContent, String schoolNum, int schoolTypeId, String schoolBestMajor, String salary) {
-        super();
-        this.schoolId = schoolId;
-        this.schoolName = schoolName;
-        this.schoolRank = schoolRank;
-        this.cityId = cityId;
-        this.cityName = cityName;
-        this.schoolImg = schoolImg;
-        this.schoolContent = schoolContent;
-        this.schoolNum = schoolNum;
-        this.schoolTypeId = schoolTypeId;
-        this.schoolBestMajor = schoolBestMajor;
-        this.salary = salary;
-    }
+
     public School() {
         super();
     }

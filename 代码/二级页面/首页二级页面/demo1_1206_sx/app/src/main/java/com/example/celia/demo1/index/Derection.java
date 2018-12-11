@@ -82,7 +82,6 @@ public class Derection extends AppCompatActivity{
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 

@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +76,23 @@ public class PaimingSchool extends AppCompatActivity {
                 if(comment.getText()==null){
                     initData();
                 }
+                GetListAsyncTask asyncTask1 = new GetListAsyncTask(PaimingSchool.this,listView);
+                asyncTask1.execute();
+            }
+        });
+        comment.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
                 GetListAsyncTask asyncTask1 = new GetListAsyncTask(PaimingSchool.this,listView);
                 asyncTask1.execute();
             }

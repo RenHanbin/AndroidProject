@@ -1,10 +1,13 @@
 package com.example.celia.demo1.index;
 
+import android.bluetooth.BluetoothClass;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,201 +19,220 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.celia.demo1.MainActivity;
 import com.example.celia.demo1.R;
+import com.example.celia.demo1.bean.CityBean;
+import com.example.celia.demo1.bean.PositionBean;
+import com.example.celia.demo1.bean.ProvinceBean;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class RegionalProfile extends AppCompatActivity {
-    List<Map<String,Object>> listdata;
-    DAdapter adapter;
-    ListView listView;
-    Boolean isPause = false;
-    private Spinner spinner;
-    private List data_list;
-    private ArrayAdapter arr_adapter;
+    private Spinner position;
+    private Spinner province;
+    private Spinner city;
+    private ListView collegeListView;
+    private String[] mItems;
+    private List<String> positionList;
+    private List<String> provinceList;
+    private List<String> cityList;
+    ArrayAdapter<String> adapter2;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.regionalprofile);
+        position = findViewById(R.id.sp1);
+        province = findViewById(R.id.sp2);
+        city = findViewById(R.id.sp3);
+        collegeListView = findViewById(R.id.regional);
+        //获取数据，从数据库中提取
+        initData();
+        //下拉列表
+        position = findViewById(R.id.sp1);
+        province = findViewById(R.id.sp2);
+        city = findViewById(R.id.sp3);
+    }
 
-        ImageView ivreturn=findViewById(R.id.iv_return);
-        ivreturn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(RegionalProfile.this,MainActivity.class);
-                intent.putExtra("id",0);
-                startActivity(intent);
+    //创建adapter
+
+    //从数据库当中获取data
+    public void initData() {
+        GetPositionAsyncTask asyncTask = new GetPositionAsyncTask(RegionalProfile.this);
+        asyncTask.execute();
+    }
+
+    //获取Position下拉列表的异步任务类
+    class GetPositionAsyncTask extends AsyncTask<String, Void, List<String>> {
+        private Context mContext;
+
+        public GetPositionAsyncTask(Context mContext) {
+            this.mContext = mContext;
+        }
+
+        @Override
+        protected List<String> doInBackground(String... strings) {
+            String path = getResources().getString(R.string.app_url);
+            String urlStr =  path+"PositionServlet?remark=getPositionList";
+            URL url = null;
+            try {
+                url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                Log.e("test", str);
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                positionList = new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    PositionBean position = new PositionBean();
+                    position.setPositionId(object1.getInt("positionId"));
+                    position.setPositionName(object1.getString("positionName"));
+                    positionList.add(position.getPositionName());
+                }
+                Log.e("test", positionList.toString());
+                return positionList;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        });
 
+            return null;
+        }
 
-        spinner = (Spinner) findViewById(R.id.sp1);
-        //数据
-        data_list = new ArrayList<String>();
-        data_list.add("北部");
-        data_list.add("南部");
-        data_list.add("东部");
-        data_list.add("西部");
-        //适配器
-        arr_adapter= new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item,
-                data_list);
-        //设置样式
-        arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // 加载适配器
-        spinner.setAdapter(arr_adapter);
-
-
-
-        spinner = (Spinner) findViewById(R.id.sp2);
-        //数据
-        data_list = new ArrayList<String>();
-        data_list.add("河北省");
-        data_list.add("黑龙江省");
-        data_list.add("吉林省");
-        data_list.add("辽宁省");
-        //适配器
-        arr_adapter= new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item,
-                data_list);
-        //设置样式
-        arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // 加载适配器
-        spinner.setAdapter(arr_adapter);
-
-
-
-
-        spinner = (Spinner) findViewById(R.id.sp3);
-        //数据
-        data_list = new ArrayList<String>();
-        data_list.add("石家庄");
-        data_list.add("廊坊");
-        data_list.add("沧州");
-        data_list.add("张家口");
-        //适配器
-        arr_adapter= new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item,
-                data_list);
-        //设置样式
-        arr_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // 加载适配器
-        spinner.setAdapter(arr_adapter);
-
-        //准备数据
-        listdata = initData();
-        //创建Adapter
-        adapter = new DAdapter(this, R.layout.regional_list_item, listdata);
-        //绑定适配器
-        listView = findViewById(R.id.regional);
-        listView.setAdapter(adapter);
+        protected void onPostExecute(List<String> result) {
+            Log.e("test", "已经进行到异步类的显示阶段");
+            adapter2 = new ArrayAdapter<String>(mContext, R.layout.spinner_item, result);
+            position.setAdapter(adapter2);
+        }
     }
 
-    private List<Map<String, Object>> initData(){
-        Map<String, Object> map1 = new HashMap<String, Object>();
-        map1.put("college", "清华大学");
-        map1.put("level", "211");
-        map1.put("position", "土木工程");
-        Map<String, Object> map2 = new HashMap<String, Object>();
-        map2.put("college", "清华大学");
-        map2.put("level", "211");
-        map2.put("position", "土木工程");
-        Map<String, Object> map3 = new HashMap<String, Object>();
-        map3.put("college", "清华大学");
-        map3.put("level", "211");
-        map3.put("position", "土木工程");
-        Map<String, Object> map4 = new HashMap<String, Object>();
-        map4.put("college", "清华大学");
-        map4.put("level", "211");
-        map4.put("position", "土木工程");
-        Map<String, Object> map5 = new HashMap<String, Object>();
-        map5.put("college", "清华大学");
-        map5.put("level", "211");
-        map5.put("position", "土木工程");
-        Map<String, Object> map6 = new HashMap<String, Object>();
-        map6.put("college", "清华大学");
-        map6.put("level", "211");
-        map6.put("position", "土木工程");
-        Map<String, Object> map7 = new HashMap<String, Object>();
-        map7.put("college", "清华大学");
-        map7.put("level", "211");
-        map7.put("position", "土木工程");
-        Map<String, Object> map8 = new HashMap<String, Object>();
-        map8.put("college", "清华大学");
-        map8.put("level", "211");
-        map8.put("position", "土木工程");
-        Map<String, Object> map9 = new HashMap<String, Object>();
-        map9.put("college", "清华大学");
-        map9.put("level", "211");
-        map9.put("position", "土木工程");
-        Map<String, Object> map10 = new HashMap<String, Object>();
-        map10.put("college", "清华大学");
-        map10.put("level", "211");
-        map10.put("position", "土木工程");
+    //获取Province下拉列表的异步任务类
+    class GetProvinceAsyncTask extends AsyncTask<String, Void, List<String>> {
+        private Context mContext;
 
-
-        listdata = new ArrayList<>();
-        listdata.add(map1);listdata.add(map2);
-        listdata.add(map3);listdata.add(map4);
-        listdata.add(map5);listdata.add(map6);
-        listdata.add(map7);listdata.add(map8);
-        listdata.add(map9);listdata.add(map10);
-        return listdata;
-    }
-
-    //创建自定义适配器
-    private  class DAdapter extends BaseAdapter {
-        private Context context;
-        private int itemLayoutId;
-        private List<Map<String,Object>> data;
-        public DAdapter(Context context,int itemLayoutId,List<Map<String,Object>> data){
-            this.context=context;
-            this.itemLayoutId=itemLayoutId;
-            this.data=data;
+        public GetProvinceAsyncTask(Context mContext) {
+            this.mContext = mContext;
         }
 
         @Override
-        public int getCount() {
-            return data.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return data.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            if(convertView==null){
-                LayoutInflater inflater = LayoutInflater.from(context);
-                convertView = inflater.inflate(itemLayoutId,null);
+        protected List<String> doInBackground(String... strings) {
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path + "ProvinceServlet?remark=getProvinceList";
+            URL url = null;
+            try {
+                url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                Log.e("test", str);
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                provinceList = new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    ProvinceBean province = new ProvinceBean();
+                    province.setProvinceId(object1.getInt("positionId"));
+                    province.setProvinceName(object1.getString("positionName"));
+                    positionList.add(province.getProvinceName());
+                }
+                Log.e("test", provinceList.toString());
+                return provinceList;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            TextView college= convertView.findViewById(R.id.college);
-            TextView collegelevel = convertView.findViewById(R.id.level);
-            TextView collegeposition = convertView.findViewById(R.id.position);
-            Map<String,Object> map = data.get(position);
-            college.setText((String) map.get("college"));
-            collegelevel.setText((String) map.get("level"));
-            collegeposition.setText((String) map.get("position"));
-            return convertView;
+
+            return null;
         }
 
-        public void setListdata(List<Map<String,Object>> data) {
-            this.data = data;
+        protected void onPostExecute(List<String> result) {
+            Log.e("test", "已经进行到异步类的显示阶段");
+            adapter2 = new ArrayAdapter<String>(mContext, R.layout.spinner_item, result);
+            position.setAdapter(adapter2);
         }
-
-
     }
 
+    //获取城市下拉列表的异步任务类
+    class GetCityAsyncTask extends AsyncTask<String, Void, List<String>> {
+
+        private Context mContext;
+
+        public GetCityAsyncTask(Context mContext) {
+            this.mContext = mContext;
+        }
+
+        @Override
+        protected List<String> doInBackground(String... strings) {
+            String path = getResources().getString(R.string.app_url);
+            String urlStr = path + "CityServlet?remark=getCityList";
+            URL url = null;
+            try {
+                url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                Log.e("test", str);
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                cityList = new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    CityBean city = new CityBean();
+                    city.setCityId(object1.getInt("cityId"));
+                    city.setCityName(object1.getString("cityName"));
+                    cityList.add(city.getCityName());
+                }
+                Log.e("test", cityList.toString());
+                return cityList;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        protected void onPostExecute(List<String> result) {
+            Log.e("test", "已经进行到异步类的显示阶段");
+            adapter2 = new ArrayAdapter<String>(mContext, R.layout.spinner_item, result);
+            position.setAdapter(adapter2);
+        }
+    }
 }

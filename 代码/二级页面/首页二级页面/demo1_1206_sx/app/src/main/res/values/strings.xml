@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">demo1</string>
-    <string name="app_url">http://10.7.88.251:8080/go2school/</string>
+    <string name="app_url">http://10.7.88.248:8080/go2school/</string>
     <string name="phone_url">http://192.168.43.59:8080/go2school/</string>
 </resources>
