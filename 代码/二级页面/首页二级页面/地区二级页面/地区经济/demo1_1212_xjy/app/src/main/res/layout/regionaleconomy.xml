@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout android:layout_height="50dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -18,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="-25dp"
-            android:text="地区简介"
+            android:text="地区经济"
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -27,55 +28,53 @@
             />
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="15dp">
-            <Spinner
-                android:dropDownVerticalOffset="25dp"
-                android:dropDownHorizontalOffset="10dp"
-                android:id="@+id/sp1"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:paddingRight="20dp">
-
-            </Spinner>
-            <Spinner
-                android:dropDownVerticalOffset="25dp"
-                android:layout_toRightOf="@id/sp1"
-                android:id="@+id/sp2"
-                android:layout_marginLeft="10dp"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
-
-            </Spinner>
-            <Spinner
-                android:dropDownVerticalOffset="25dp"
-                android:id="@+id/sp3"
-                android:layout_toRightOf="@id/sp2"
-                android:layout_marginLeft="10dp"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content">
-
-            </Spinner>
-
-        </RelativeLayout>
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_corner">
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/search"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp" />
+                <EditText
+                    android:id="@+id/et_name"
+                    android:background="@null"
+                    android:hint="城市名称"
+                    android:textSize="14dp"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:text="| 提问"
+                    android:textColor="#a3a3a3"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="340dp"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="学校名称"
+                android:text="城    市"
                 android:textColor="#3ac9bf"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -85,7 +84,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="学校水平"
+                android:text="人均 GDP"
                 android:textColor="#3ac9bf"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -95,7 +94,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="优势专业"
+                android:text="具有大学数"
                 android:textColor="#3ac9bf"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -104,7 +103,8 @@
         </LinearLayout>
         <ListView android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:id="@+id/regional"/>
+            android:id="@+id/economy"/>
+
 
     </LinearLayout>
 
