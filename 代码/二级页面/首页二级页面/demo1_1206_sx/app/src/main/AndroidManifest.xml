@@ -27,6 +27,12 @@
         <activity android:name=".index.IndexLearn"/>
         <activity android:name=".index.IndexLearnMajor"/>
         <activity android:name=".index.MajorProspect"/>
+        <activity android:name=".index.UniversityIntroduce"/>
+        <activity android:name=".index.RegionalProfile"/>
+        <activity android:name=".index.RegionalEconomy"/>
+        <activity android:name=".index.IndexJobs"/>
+        <activity android:name=".index.IndexScore"/>
+        <activity android:name=".index.Index_school"/>
         <activity android:name=".my.MyQuest"/>
         <activity android:name=".my.MyComm"/>
         <activity android:name=".my.MyMagor"/>
@@ -35,13 +41,12 @@
         <activity android:name=".my.MyTopic"/>
         <activity android:name=".my.MyWallet"/>
         <activity android:name=".my.MySetUp"/>
-        <activity android:name=".index.UniversityIntroduce"/>
-        <activity android:name=".index.RegionalProfile"/>
-        <activity android:name=".index.RegionalEconomy"/>
-        <activity android:name=".index.IndexJobs"/>
-        <activity android:name=".index.IndexScore"/>
         <activity android:name=".shequ.SheAttention"/>
         <activity android:name=".shequ.ShequQuestion"/>
+        <activity android:name=".zixun.ZiXun2Sister"/>
+        <activity android:name=".zixun.ZiXun2"/>
+        <activity android:name=".zixun.ZiXun3"/>
+        <activity android:name=".zixun.ZiXun3Talk"/>
     </application>
 
 </manifest>

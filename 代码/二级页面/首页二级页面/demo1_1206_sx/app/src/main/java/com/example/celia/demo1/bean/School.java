@@ -10,12 +10,19 @@ public class School {
     private String schoolContent;
     private String schoolNum;
     private int schoolTypeId;
+    private String schoolTypeName;
     private String schoolBestMajor;
     private String salary;
     private String need;
     private String low_grade;
     private int low_rank;
 
+    public String getSchoolTypeName() {
+        return schoolTypeName;
+    }
+    public void setSchoolTypeName(String schoolTypeName) {
+        this.schoolTypeName = schoolTypeName;
+    }
     public String getNeed() {
         return need;
     }

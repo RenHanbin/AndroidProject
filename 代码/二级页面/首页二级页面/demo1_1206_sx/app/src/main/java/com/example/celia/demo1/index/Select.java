@@ -164,6 +164,20 @@ public class Select extends AppCompatActivity {
                 }
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.setClass(Select.this,Index_school.class);
+                intent.putExtra("schoolImg",datalist.get(position).getSchoolImg());
+                intent.putExtra("schoolName",datalist.get(position).getSchoolName());
+                intent.putExtra("schoolNum",datalist.get(position).getSchoolNum());
+                intent.putExtra("schoolContent",datalist.get(position).getSchoolContent());
+                intent.putExtra("schoolBestMajor",datalist.get(position).getSchoolBestMajor());
+                intent.putExtra("schoolType",datalist.get(position).getSchoolTypeName());
+                startActivity(intent);
+            }
+        });
     }
 
     private void initData() {
@@ -247,7 +261,16 @@ public class Select extends AppCompatActivity {
                 for (int i = 0; i < array.length(); ++i) {
                     JSONObject object1 = array.getJSONObject(i);
                     School school = new School();
+                    school.setSchoolId(object1.getInt("schoolId"));
                     school.setSchoolName(object1.getString("schoolName"));
+                    school.setSchoolRank(object1.getInt("schoolRank"));
+                    school.setCityId(object1.getInt("cityId"));
+                    school.setSchoolImg(object1.getString("schoolImg"));
+                    school.setSchoolContent(object1.getString("schoolContent"));
+                    school.setSchoolNum(object1.getString("schoolNum"));
+                    school.setSchoolTypeId(object1.getInt("schoolTypeId"));
+                    school.setSchoolTypeName(object1.getString("schoolTypeName"));
+                    school.setSchoolBestMajor(object1.getString("schoolMajor"));
                     school.setNeed(object1.getString("need"));
                     school.setLow_grade(object1.getString("lowGrade"));
                     school.setLow_rank(object1.getInt("lowRank"));
@@ -303,7 +326,16 @@ public class Select extends AppCompatActivity {
                 for (int i = 0; i < array.length(); ++i) {
                     JSONObject object1 = array.getJSONObject(i);
                     School school = new School();
+                    school.setSchoolId(object1.getInt("schoolId"));
                     school.setSchoolName(object1.getString("schoolName"));
+                    school.setSchoolRank(object1.getInt("schoolRank"));
+                    school.setCityId(object1.getInt("cityId"));
+                    school.setSchoolImg(object1.getString("schoolImg"));
+                    school.setSchoolContent(object1.getString("schoolContent"));
+                    school.setSchoolNum(object1.getString("schoolNum"));
+                    school.setSchoolTypeId(object1.getInt("schoolTypeId"));
+                    school.setSchoolTypeName(object1.getString("schoolTypeName"));
+                    school.setSchoolBestMajor(object1.getString("schoolMajor"));
                     school.setNeed(object1.getString("need"));
                     school.setLow_grade(object1.getString("lowGrade"));
                     school.setLow_rank(object1.getInt("lowRank"));
@@ -359,7 +391,16 @@ public class Select extends AppCompatActivity {
                 for (int i = 0; i < array.length(); ++i) {
                     JSONObject object1 = array.getJSONObject(i);
                     School school = new School();
+                    school.setSchoolId(object1.getInt("schoolId"));
                     school.setSchoolName(object1.getString("schoolName"));
+                    school.setSchoolRank(object1.getInt("schoolRank"));
+                    school.setCityId(object1.getInt("cityId"));
+                    school.setSchoolImg(object1.getString("schoolImg"));
+                    school.setSchoolContent(object1.getString("schoolContent"));
+                    school.setSchoolNum(object1.getString("schoolNum"));
+                    school.setSchoolTypeId(object1.getInt("schoolTypeId"));
+                    school.setSchoolTypeName(object1.getString("schoolTypeName"));
+                    school.setSchoolBestMajor(object1.getString("schoolMajor"));
                     school.setNeed(object1.getString("need"));
                     school.setLow_grade(object1.getString("lowGrade"));
                     school.setLow_rank(object1.getInt("lowRank"));
@@ -415,7 +456,16 @@ public class Select extends AppCompatActivity {
                 for (int i = 0; i < array.length(); ++i) {
                     JSONObject object1 = array.getJSONObject(i);
                     School school = new School();
+                    school.setSchoolId(object1.getInt("schoolId"));
                     school.setSchoolName(object1.getString("schoolName"));
+                    school.setSchoolRank(object1.getInt("schoolRank"));
+                    school.setCityId(object1.getInt("cityId"));
+                    school.setSchoolImg(object1.getString("schoolImg"));
+                    school.setSchoolContent(object1.getString("schoolContent"));
+                    school.setSchoolNum(object1.getString("schoolNum"));
+                    school.setSchoolTypeId(object1.getInt("schoolTypeId"));
+                    school.setSchoolTypeName(object1.getString("schoolTypeName"));
+                    school.setSchoolBestMajor(object1.getString("schoolMajor"));
                     school.setNeed(object1.getString("need"));
                     school.setLow_grade(object1.getString("lowGrade"));
                     school.setLow_rank(object1.getInt("lowRank"));
