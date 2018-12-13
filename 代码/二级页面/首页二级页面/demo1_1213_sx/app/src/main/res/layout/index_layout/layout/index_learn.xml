@@ -34,7 +34,7 @@
         android:layout_marginTop="15dp"
         >
         <CheckBox
-            android:id="@+id/Chinese"
+            android:id="@+id/chinese"
             android:text="语文"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:textColor="#3ac9bf"
             />
         <CheckBox
-            android:id="@+id/Math"
+            android:id="@+id/math"
             android:text="数学"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/English"
+            android:id="@+id/english"
             android:text="英语"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/History"
+            android:id="@+id/history"
             android:text="历史"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         android:paddingLeft="20dp"
         >
         <CheckBox
-            android:id="@+id/Geography"
+            android:id="@+id/geography"
             android:text="地理"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
             android:textColor="#3ac9bf"
             />
         <CheckBox
-            android:id="@+id/Politics"
+            android:id="@+id/politics"
             android:text="政治"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/Physics"
+            android:id="@+id/physics"
             android:text="物理"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/Chemistry"
+            android:id="@+id/chemistry"
             android:text="化学"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
         android:paddingLeft="20dp"
         >
         <CheckBox
-            android:id="@+id/Biology"
+            android:id="@+id/biology"
             android:text="生物"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
             android:textColor="#3ac9bf"
             />
         <CheckBox
-            android:id="@+id/Art"
+            android:id="@+id/art"
             android:text="艺术"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/PE"
+            android:id="@+id/pe"
             android:text="体育"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
             android:buttonTint="#3ac9bf"
             android:textColor="#3ac9bf"/>
         <CheckBox
-            android:id="@+id/ZhiJi"
+            android:id="@+id/zhiji"
             android:text="职技"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

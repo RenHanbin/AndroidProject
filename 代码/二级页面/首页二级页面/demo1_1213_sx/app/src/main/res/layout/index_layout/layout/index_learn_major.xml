@@ -4,30 +4,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/themeColor"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#3ac9bf"
+        android:layout_height="@dimen/biaoti"
         android:orientation="horizontal">
-        <LinearLayout
-            android:id="@+id/ll_return1"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:gravity="center">
-            <ImageView
-                android:src="@drawable/return1"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_margin="10dp"
-                />
-        </LinearLayout>
-
+        <ImageView
+            android:id="@+id/iv_return"
+            android:src="@drawable/return1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
         <TextView
-            android:text="专业介绍"
-            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textColor="@color/transparent"
+            android:textStyle="bold"
             android:textSize="@dimen/daohang"
+            android:text="专业介绍"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <ListView
         android:id="@+id/lv_list_learn_major"

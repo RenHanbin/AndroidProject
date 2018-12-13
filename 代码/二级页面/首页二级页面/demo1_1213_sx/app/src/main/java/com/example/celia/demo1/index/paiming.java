@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -91,7 +92,50 @@ public class paiming extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //跳转
+        learn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.setClass(paiming.this,Index_major.class);
+                intent.putExtra("majorName",majorLearnList.get(position).getMajorName());
+                intent.putExtra("mainMajor",majorLearnList.get(position).getMajorTypeName());
+                intent.putExtra("info",majorLearnList.get(position).getMajorIntroduce());
+                intent.putExtra("subject",majorLearnList.get(position).getMajorSubject());
+                intent.putExtra("derections",majorLearnList.get(position).getMajorWork());
+                startActivity(intent);
+            }
+        });
+        out.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.setClass(paiming.this,Index_major.class);
+                intent.putExtra("majorName",majorLearnList2.get(position).getMajorName());
+                intent.putExtra("mainMajor",majorLearnList2.get(position).getMajorTypeName());
+                intent.putExtra("info",majorLearnList2.get(position).getMajorIntroduce());
+                intent.putExtra("subject",majorLearnList2.get(position).getMajorSubject());
+                intent.putExtra("derections",majorLearnList2.get(position).getMajorWork());
+                startActivity(intent);
+            }
+        });
+        work.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                intent.setClass(paiming.this,Index_major.class);
+                intent.putExtra("majorName",majorLearnList3.get(position).getMajorName());
+                intent.putExtra("mainMajor",majorLearnList3.get(position).getMajorTypeName());
+                intent.putExtra("info",majorLearnList3.get(position).getMajorIntroduce());
+                intent.putExtra("subject",majorLearnList3.get(position).getMajorSubject());
+                intent.putExtra("derections",majorLearnList3.get(position).getMajorWork());
+                startActivity(intent);
+            }
+        });
     }
+
+
     /*初始化数据*/
     private void initData() {
         GetMajorLearnListAsyncTask asyncTask=new GetMajorLearnListAsyncTask(paiming.this,learn);
@@ -207,10 +251,13 @@ public class paiming extends AppCompatActivity {
                     major.setMajorWorkPercent(object1.getDouble("majorWorkPercent"));
                     major.setMajorStudy(object1.getDouble("majorStudy"));
                     major.setMajorGo(object1.getDouble("majorGo"));
+                    major.setMajorTypeName(object1.getString("majorTypeName"));
+                    major.setMajorIntroduce(object1.getString("majorIntroduce"));
+                    major.setMajorSubject(object1.getString("majorSubject"));
+                    major.setMajorWork(object1.getString("majorWork"));
                     majorLearnList.add(major);
                 }
                 Log.e("test", majorLearnList.toString());
-                return majorLearnList;
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -218,7 +265,7 @@ public class paiming extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            return null;
+            return majorLearnList;
         }
 
         @Override
@@ -264,10 +311,14 @@ public class paiming extends AppCompatActivity {
                     major.setMajorWorkPercent(object1.getDouble("majorWorkPercent"));
                     major.setMajorStudy(object1.getDouble("majorStudy"));
                     major.setMajorGo(object1.getDouble("majorGo"));
+                    major.setMajorTypeName(object1.getString("majorTypeName"));
+                    major.setMajorIntroduce(object1.getString("majorIntroduce"));
+                    major.setMajorSubject(object1.getString("majorSubject"));
+                    major.setMajorWork(object1.getString("majorWork"));
                     majorLearnList2.add(major);
                 }
                 Log.e("test", majorLearnList2.toString());
-                return majorLearnList2;
+
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -275,7 +326,7 @@ public class paiming extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            return null;
+            return majorLearnList2;
         }
 
         @Override
@@ -321,10 +372,14 @@ public class paiming extends AppCompatActivity {
                     major.setMajorWorkPercent(object1.getDouble("majorWorkPercent"));
                     major.setMajorStudy(object1.getDouble("majorStudy"));
                     major.setMajorGo(object1.getDouble("majorGo"));
+                    major.setMajorTypeName(object1.getString("majorTypeName"));
+                    major.setMajorIntroduce(object1.getString("majorIntroduce"));
+                    major.setMajorSubject(object1.getString("majorSubject"));
+                    major.setMajorWork(object1.getString("majorWork"));
                     majorLearnList3.add(major);
                 }
                 Log.e("test", majorLearnList3.toString());
-                return majorLearnList3;
+
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -332,7 +387,7 @@ public class paiming extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            return null;
+            return majorLearnList3;
         }
 
         @Override

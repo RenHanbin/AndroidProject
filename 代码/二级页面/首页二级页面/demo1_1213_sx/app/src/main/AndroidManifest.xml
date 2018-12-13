@@ -33,6 +33,7 @@
         <activity android:name=".index.IndexJobs"/>
         <activity android:name=".index.IndexScore"/>
         <activity android:name=".index.Index_school"/>
+        <activity android:name=".index.Index_major"/>
         <activity android:name=".my.MyQuest"/>
         <activity android:name=".my.MyComm"/>
         <activity android:name=".my.MyMagor"/>

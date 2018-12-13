@@ -7,21 +7,43 @@ public class Major {
         private int majorSalary;
         private int majorTypeId;
         private String majorTypeName;
+        private int majorWant;
+        private int majorNeed;
         private double majorStudy;
         private double majorGo;
+        private String majorIntroduce;
+        private String majorSubject;
+        private String majorWork;
 
-
-    public Major(int majorId, String majorName, double majorWorkPercent, int majorSalary, int majorTypeId,
-                     String majorTypeName, double majorStudy, double majorGo) {
-        super();
-        this.majorId = majorId;
-        this.majorName = majorName;
-        this.majorWorkPercent = majorWorkPercent;
-        this.majorSalary = majorSalary;
-        this.majorTypeId = majorTypeId;
-        this.majorTypeName = majorTypeName;
-        this.majorStudy = majorStudy;
-        this.majorGo = majorGo;
+    public String getMajorIntroduce() {
+        return majorIntroduce;
+    }
+    public void setMajorIntroduce(String majorIntroduce) {
+        this.majorIntroduce = majorIntroduce;
+    }
+    public String getMajorSubject() {
+        return majorSubject;
+    }
+    public void setMajorSubject(String majorSubject) {
+        this.majorSubject = majorSubject;
+    }
+    public String getMajorWork() {
+        return majorWork;
+    }
+    public void setMajorWork(String majorWork) {
+        this.majorWork = majorWork;
+    }
+    public int getMajorWant() {
+        return majorWant;
+    }
+    public void setMajorWant(int majorWant) {
+        this.majorWant = majorWant;
+    }
+    public int getMajorNeed() {
+        return majorNeed;
+    }
+    public void setMajorNeed(int majorNeed) {
+        this.majorNeed = majorNeed;
     }
     public double getMajorStudy() {
         return majorStudy;
