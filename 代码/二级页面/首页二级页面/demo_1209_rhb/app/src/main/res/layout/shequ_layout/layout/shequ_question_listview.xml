@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <com.example.celia.demo1.XCRoundImageView
+            android:id="@+id/shequ_question_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/user"
+            android:clickable="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_shequ_question_name"
+                android:textSize="15dp"
+                android:text="张晓晓"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tv_shequ_question_time"
+                android:textSize="18dp"
+                android:text="12-32 20:20"
+                android:textColor="#aaaaaa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/tv_shequ_question_content"
+        android:text="改革开放是决定当代中国命运的关键抉择，是当代中国发展进步的活力之源，是党和人民事业大踏步赶上时代的重要法宝，是坚持和发展中国特色社会主义、实现中华民族伟大复兴的必由之路。"
+        android:textSize="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+</LinearLayout>
