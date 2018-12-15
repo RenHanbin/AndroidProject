@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/themeColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/biaoti"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_return"
+            android:src="@drawable/return1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/transparent"
+            android:textStyle="bold"
+            android:textSize="@dimen/daohang"
+            android:text="专业介绍"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_list_learn_major"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>
