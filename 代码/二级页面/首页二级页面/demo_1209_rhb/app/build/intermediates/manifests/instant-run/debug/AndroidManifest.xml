@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.celia.demo1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.example.celia.demo1.ContextData"
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.celia.demo1.MainActivity"
+            android:icon="@mipmap/logo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.celia.demo1.my.MyUser" />
+        <activity android:name="com.example.celia.demo1.index.Index_school" />
+        <activity android:name="com.example.celia.demo1.index.Index_major" />
+        <activity android:name="com.example.celia.demo1.initActivities.LoginActivity" />
+        <activity android:name="com.example.celia.demo1.zixun.TabHostActivity" />
+        <activity android:name="com.example.celia.demo1.initActivities.FindPasswordActivity" />
+        <activity android:name="com.example.celia.demo1.initActivities.RegisterActivity" />
+        <activity android:name="com.example.celia.demo1.index.paiming" />
+        <activity android:name="com.example.celia.demo1.index.HotMajor" />
+        <activity android:name="com.example.celia.demo1.index.PaimingSchool" />
+        <activity android:name="com.example.celia.demo1.index.Derection" />
+        <activity android:name="com.example.celia.demo1.index.Select" />
+        <activity android:name="com.example.celia.demo1.index.IndexLearn" />
+        <activity android:name="com.example.celia.demo1.index.IndexLearnMajor" />
+        <activity android:name="com.example.celia.demo1.index.MajorProspect" />
+        <activity android:name="com.example.celia.demo1.index.Index3Major" />
+        <activity android:name="com.example.celia.demo1.my.MyQuest" />
+        <activity android:name="com.example.celia.demo1.my.MyComm" />
+        <activity android:name="com.example.celia.demo1.my.MyMagor" />
+        <activity android:name="com.example.celia.demo1.my.MyScho" />
+        <activity android:name="com.example.celia.demo1.my.MyAtten" />
+        <activity android:name="com.example.celia.demo1.my.MyTopic" />
+        <activity android:name="com.example.celia.demo1.my.MyWallet" />
+        <activity android:name="com.example.celia.demo1.my.MySetUp" />
+        <activity android:name="com.example.celia.demo1.index.UniversityIntroduce" />
+        <activity android:name="com.example.celia.demo1.index.RegionalProfile" />
+        <activity android:name="com.example.celia.demo1.index.RegionalEconomy" />
+        <activity android:name="com.example.celia.demo1.index.IndexJobs" />
+        <activity android:name="com.example.celia.demo1.index.IndexScore" />
+        <activity android:name="com.example.celia.demo1.shequ.SheAttention" />
+        <activity android:name="com.example.celia.demo1.shequ.ShequQuestion" />
+        <activity android:name="com.example.celia.demo1.zixun.ZiXun2" />
+        <activity android:name="com.example.celia.demo1.zixun.ZiXun2Sister" />
+        <activity android:name="com.example.celia.demo1.zixun.ZiXun3" />
+        <activity android:name="com.example.celia.demo1.zixun.ZiXun3Talk" />
+        <activity android:name="com.example.celia.demo1.index.Index3City" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.example.celia.demo1.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
