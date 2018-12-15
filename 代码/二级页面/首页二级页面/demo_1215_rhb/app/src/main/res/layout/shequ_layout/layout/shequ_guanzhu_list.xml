@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout android:layout_height="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="3">
+            <ImageView
+                android:id="@+id/iv_shequ_head"
+                android:paddingLeft="1dp"
+                android:paddingTop="7dp"
+                android:layout_width="78dp"
+                android:layout_height="75dp"
+                android:layout_weight="3"
+                android:src="@drawable/ic_launcher_background" />
+            <ImageView
+                android:src="@drawable/head"
+                android:layout_width="80dp"
+                android:layout_height="85dp" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_shequ_name"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:textSize="20dp"
+                android:text="张晓晓"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_shequ_time"
+                android:layout_marginTop="4dp"
+                android:gravity="left"
+                android:textSize="18dp"
+                android:text="12-32 20:20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_zan_image"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ggreen"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="34dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tv_shequ_guanzhu_nei"
+        android:textSize="18dp"
+        android:text="高考作为中国千万学子改变命运的转折点，很多家长对于自己的孩子特别关心，那么平时成绩在400左右，能上什么样的大学呢？平时成绩380-530之间能上什么样的大学？"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,4 +1,0 @@
-#Fri Dec 14 19:40:09 CST 2018
-base.0=F\:\\ThreeUp\\Android\\workplace\\demo_1209_rhb\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
-path.0=classes.dex
-renamed.0=classes.dex
