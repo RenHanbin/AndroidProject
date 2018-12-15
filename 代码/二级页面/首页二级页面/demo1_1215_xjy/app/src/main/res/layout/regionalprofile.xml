@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#3ac9bf">
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/return1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-25dp"
+            android:text="地区简介"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp">
+            <Spinner
+                android:dropDownVerticalOffset="40dp"
+                android:dropDownHorizontalOffset="10dp"
+                android:id="@+id/sp1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp">
+
+            </Spinner>
+            <Spinner
+                android:dropDownVerticalOffset="80dp"
+                android:dropDownHorizontalOffset="10dp"
+                android:layout_toRightOf="@id/sp1"
+                android:id="@+id/sp2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+            <Spinner
+                android:dropDownVerticalOffset="80dp"
+                android:dropDownHorizontalOffset="10dp"
+                android:id="@+id/sp3"
+                android:layout_toRightOf="@id/sp2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="340dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="学校名称"
+                android:textColor="#3ac9bf"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="学校排名"
+                android:textColor="#3ac9bf"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="优势专业"
+                android:textColor="#3ac9bf"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <ListView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/regional"/>
+
+    </LinearLayout>
+
+</LinearLayout>
