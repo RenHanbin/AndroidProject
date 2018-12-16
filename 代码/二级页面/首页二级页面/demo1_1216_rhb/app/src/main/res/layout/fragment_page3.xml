@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="600dp"
+    android:layout_width="match_parent"
+    android:fillViewport="false"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:src="@drawable/banner1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+
+        <!--高考新资讯-->
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_gaokao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:textColor="#ff0000"
+                android:textStyle="bold"
+                android:text="高考新资讯 >>"
+                android:textSize="20dp" />
+
+            <TextView
+                android:paddingTop="3dp"
+                android:gravity="center"
+                android:id="@+id/tv_zhuanlan"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="5dp"
+                android:text="专栏"
+                android:textSize="16dp" />
+        </RelativeLayout>
+        <ListView
+            android:layout_gravity="center"
+            android:id="@+id/zixun_index_news"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp" />
+
+        <!--学长学姐有话说-->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_sister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#330033"
+            android:textStyle="bold"
+            android:text="学长学姐有话说 >>"
+            android:paddingLeft="16dp"
+            android:textSize="20dp"/>
+
+        <GridView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:numColumns="3"
+            android:id="@+id/zixun_talk">
+        </GridView>
+
+
+    </LinearLayout>
+</ScrollView>
+
