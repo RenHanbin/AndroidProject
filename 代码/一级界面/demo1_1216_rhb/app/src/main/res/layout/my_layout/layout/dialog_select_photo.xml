@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:background="@drawable/framee"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center"
+        android:textSize="18dp"
+        android:id="@+id/tv_select_gallery"
+        android:text="从图库中选取"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:gravity="center"
+        android:textSize="18dp"
+        android:id="@+id/tv_select_camera"
+        android:text="拍摄照片"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>
