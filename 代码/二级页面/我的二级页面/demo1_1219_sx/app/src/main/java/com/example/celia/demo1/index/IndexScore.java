@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -52,6 +54,8 @@ public class IndexScore extends AppCompatActivity {
     String studentTypeName;//学生类别名
     private List<String> strList;
     private Map<String,TextView> tvMap2;
+    private TextView pName;
+    String name;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +66,8 @@ public class IndexScore extends AppCompatActivity {
         list.add("普通生");
         list.add("体育生");
         list.add("艺术生");
+        pName = findViewById(R.id.provinceName);
+
         Spinner sp = (Spinner) findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.spinner_textsize,R.id.weekofday,list);
         sp.setAdapter(adapter);
@@ -70,6 +76,27 @@ public class IndexScore extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 studentTypeName=list.get(position);
                 Log.e("test",studentTypeName);
+                name = (String) pName.getText();
+                Log.e("test:省份：",name);
+                //提供省份和学生类别
+                strList=new ArrayList<>();
+                strList.add(name);
+                strList.add(studentTypeName);
+                TextView proName=findViewById(R.id.provinceName);
+                TextView first=findViewById(R.id.firstLine);
+                TextView second=findViewById(R.id.secondLine);
+                TextView third=findViewById(R.id.thirdLine);
+                TextView other=findViewById(R.id.otherLine);
+                //创建返回map
+                tvMap2= new HashMap<>();
+                tvMap2.put("proName",proName);
+                tvMap2.put("first",first);
+                tvMap2.put("second",second);
+                tvMap2.put("third",third);
+                tvMap2.put("other",other);
+                GetLineAsyncTask lineAsyncTask=new GetLineAsyncTask(strList,tvMap2);
+                lineAsyncTask.execute();
+                Toast.makeText(IndexScore.this,"搜索省份",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -91,11 +118,11 @@ public class IndexScore extends AppCompatActivity {
         });
         //搜索省份
         search=findViewById(R.id.search);
+        inputProvince=findViewById(R.id.et_inputProvince);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //得到输入的省份
-                inputProvince=findViewById(R.id.et_inputProvince);
                 String inputStr=inputProvince.getText().toString();
                 Log.e("test:省份：",inputStr);
                 //提供省份和学生类别
@@ -117,6 +144,47 @@ public class IndexScore extends AppCompatActivity {
                 GetLineAsyncTask lineAsyncTask=new GetLineAsyncTask(strList,tvMap2);
                 lineAsyncTask.execute();
                 Toast.makeText(IndexScore.this,"搜索省份",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        inputProvince.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                //得到输入的省份
+                String inputStr=inputProvince.getText().toString();
+                if(inputStr.length()>2){
+                    Log.e("test:省份：",inputStr);
+                    //提供省份和学生类别
+                    strList=new ArrayList<>();
+                    strList.add(inputStr);
+                    strList.add(studentTypeName);
+                    TextView proName=findViewById(R.id.provinceName);
+                    TextView first=findViewById(R.id.firstLine);
+                    TextView second=findViewById(R.id.secondLine);
+                    TextView third=findViewById(R.id.thirdLine);
+                    TextView other=findViewById(R.id.otherLine);
+                    //创建返回map
+                    tvMap2= new HashMap<>();
+                    tvMap2.put("proName",proName);
+                    tvMap2.put("first",first);
+                    tvMap2.put("second",second);
+                    tvMap2.put("third",third);
+                    tvMap2.put("other",other);
+                    GetLineAsyncTask lineAsyncTask=new GetLineAsyncTask(strList,tvMap2);
+                    lineAsyncTask.execute();
+                    Toast.makeText(IndexScore.this,"搜索省份",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

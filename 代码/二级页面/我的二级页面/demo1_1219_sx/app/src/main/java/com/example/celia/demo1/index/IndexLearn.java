@@ -136,6 +136,8 @@ public class IndexLearn extends AppCompatActivity {
         pe.setOnCheckedChangeListener(listener);
         zhiji.setOnCheckedChangeListener(listener);
 
+
+
     }
 
     public class CustomAdapter extends BaseAdapter{
@@ -252,6 +254,13 @@ public class IndexLearn extends AppCompatActivity {
                     }
                 }
             }else {
+                if(!chinese.isChecked()&&!math.isChecked()&&!english.isChecked()&&!history.isChecked()
+                        &&!geography.isChecked() &&!politics.isChecked()&&!physics.isChecked()&&!chemistry.isChecked()
+                        &&!biology.isChecked()&&!art.isChecked()&&!pe.isChecked()&&!zhiji.isChecked()){
+                    Log.e("test","未选择");
+                    GetMajorTypeListAsyncTask asyncTask = new GetMajorTypeListAsyncTask(IndexLearn.this);
+                    asyncTask.execute();
+                }
                 switch (buttonView.getId()){
                     case R.id.chinese:{
                         if(dataList3!=null)
