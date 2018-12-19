@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.celia.demo1">
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" />
+
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
+        android:name=".ContextData"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,9 +35,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".zixun.ZiXun2"/>
-        <activity android:name=".zixun.ZiXun3"/>
         <activity android:name=".my.MyUser"/>
+        <activity android:name=".index.Index_school"/>
+        <activity android:name=".initActivities.LoginActivity"/>
+        <activity android:name=".zixun.TabHostActivity"/>
+        <activity android:name=".initActivities.FindPasswordActivity"/>
+        <activity android:name=".initActivities.RegisterActivity"/>
+        <activity android:name=".index.paiming"/>
+        <activity android:name=".index.HotMajor"/>
+        <activity android:name=".index.PaimingSchool"/>
+        <activity android:name=".index.Derection"/>
+        <activity android:name=".index.Select"/>
+        <activity android:name=".index.IndexLearn"/>
+        <activity android:name=".index.IndexLearnMajor"/>
+        <activity android:name=".index.MajorProspect"/>
+        <activity android:name=".index.Index3Major"/>
         <activity android:name=".my.MyQuest"/>
         <activity android:name=".my.MyComm"/>
         <activity android:name=".my.MyMagor"/>
@@ -28,6 +58,22 @@
         <activity android:name=".my.MyTopic"/>
         <activity android:name=".my.MyWallet"/>
         <activity android:name=".my.MySetUp"/>
+        <activity android:name=".index.UniversityIntroduce"/>
+        <activity android:name=".index.RegionalProfile"/>
+        <activity android:name=".index.RegionalEconomy"/>
+        <activity android:name=".index.IndexJobs"/>
+        <activity android:name=".index.Index_city"/>
+        <activity android:name=".index.IndexScore"/>
+        <activity android:name=".shequ.SheAttention"/>
+        <activity android:name=".shequ.ShequQuestion"/>
+        <activity android:name=".zixun.ZiXun2"/>
+        <activity android:name=".zixun.ZiXun2Sister"/>
+        <activity android:name=".zixun.ZiXun3"/>
+        <activity android:name=".zixun.ZiXun3Talk"/>
+        <activity android:name=".index.Index3City"/>
+        <activity android:name=".my.Index3MyQuestItem"/>
+        <activity android:name=".my.Index3MyQuestWrite"/>
+
     </application>
 
 </manifest>

@@ -1,20 +1,37 @@
 package com.example.celia.demo1.my;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.celia.demo1.R;
+import com.example.celia.demo1.bean.Major;
+import com.example.celia.demo1.bean.Quest;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,17 +39,16 @@ import java.util.Map;
 
 public class MyQuest extends AppCompatActivity {
     private ListView listQuest;
-    private List<Map<String,Object>> datalist;
+    private List<Quest> datalist;
+    private ListViewAdapter adapter;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.my_quest);
 
         listQuest= findViewById(R.id.lv_my_quest);
         initData();
-        CustomAdapter adapter=new CustomAdapter(this,R.layout.my_quest_list,datalist);
-        listQuest.setAdapter(adapter);
-
         //点击“<”，返回上一级界面我的my
         ImageView Ireturn=findViewById(R.id.iv_return);
         Ireturn.setOnClickListener(new View.OnClickListener() {
@@ -41,15 +57,33 @@ public class MyQuest extends AppCompatActivity {
                 finish();
             }
         });
+
+        //跳转三级页面
+        listQuest.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent();
+                    intent.setClass(MyQuest.this,Index3MyQuestItem.class);
+                    intent.putExtra("questionId",datalist.get(position).getQuestionId());
+                    intent.putExtra("questionTitle",datalist.get(position).getQuestionTitle());
+                    Log.e("questionTitle",datalist.get(position).getQuestionTitle());
+                    intent.putExtra("questionDiscribe",datalist.get(position).getQuestionDiscribe());
+                    intent.putExtra("attenNum",datalist.get(position).getAttenNum()+"");
+                    intent.putExtra("commNum",datalist.get(position).getCommNum()+"");
+                    Log.e("intent11",intent.toString());
+                    startActivity(intent);
+            }
+        });
+
     }
-    public class CustomAdapter extends BaseAdapter {
+    public class ListViewAdapter extends BaseAdapter {
 
         private Context context;
         private int itemLayoutID;
-        private List<Map<String,Object>> datalist;
-        public CustomAdapter(Context context,
-                             int itemLayoutID,
-                             List<Map<String,Object>>datalist){
+        private List<Quest> datalist;
+        public ListViewAdapter(Context context,
+                               int itemLayoutID,
+                               List<Quest> datalist){
             this.context=context;
             this.itemLayoutID=itemLayoutID;
             this.datalist=datalist;
@@ -74,23 +108,72 @@ public class MyQuest extends AppCompatActivity {
                 LayoutInflater inflater=LayoutInflater.from(context);
                 convertView=inflater.inflate(itemLayoutID,null);
             }
-            TextView textView1 = convertView.findViewById(R.id.tv_title1);
-            TextView textView2 = convertView.findViewById(R.id.tv_time);
-            Map<String, Object> map = datalist.get(position);
-            textView1.setText((String) map.get("title"));
-            textView2.setText((String) map.get("time"));
+            Log.e("aa","getView1");
+            TextView questTitle = convertView.findViewById(R.id.tv_title1);
+            TextView questTime = convertView.findViewById(R.id.tv_time);
+            Quest quest = datalist.get(position);
+                Log.e("test", quest.getQuestionTitle());
+            questTitle.setText(quest.getQuestionTitle());
+            questTime.setText(quest.getQuestionTime());
+            Log.e("aa","getView2");
             return convertView;
         }
     }
-    private void initData() {
-        String[] name1 = {"用户分享内容到社区","用户分享内容到社区","用户分享内容到社区","用户分享内容到社区","用户分享内容到社区"};
-        String[] name2 = {"01:12:01", "20:12:01", "23:02:02", "00:50:50", "03:09:05"};
-        datalist = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i < 5; i++) {
-            Map<String, Object> map = new HashMap<String, Object>();
-            map.put("title", name1[i]);
-            map.put("time", name2[i]);
-            datalist.add(map);
+
+    //创建获取数据的异步任务类
+    class GetMyQuestListAsyncTask extends AsyncTask<String,Void,List<Quest>>{
+        private Context qContext;
+        private ListView listView;
+        public GetMyQuestListAsyncTask(Context qContext,ListView listView){
+            this.qContext = qContext;
+            this.listView = listView;
         }
+        @Override
+        protected List<Quest> doInBackground(String... strings) {
+            String path=getResources().getString(R.string.url_path);
+            String urlStr = path+"MyQuestionServlet?remark=getMyQuestionList";
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                Log.e("test1", str);
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                datalist = new ArrayList<>();
+                for (int i = 0; i < array.length(); ++i) {
+                    JSONObject object1 = array.getJSONObject(i);
+                    Quest quest = new Quest();
+                    quest.setQuestionId(object1.getInt("questionId"));
+                    quest.setQuestionTitle(object1.getString("questionTitle"));
+                    quest.setQuestionTime(object1.getString("questionTime"));
+                    quest.setQuestionDiscribe(object1.getString("questionDiscribe"));
+                    quest.setAttenNum(object1.getInt("attenNum"));
+                    quest.setCommNum(object1.getInt("commNum"));
+                   datalist.add(quest);
+                }
+                Log.e("test3", datalist.toString());
+                return datalist;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        protected void onPostExecute(List<Quest> result){
+            adapter = new ListViewAdapter(qContext,R.layout.my_quest_list,result);
+            listView.setAdapter(adapter);
+        }
+    }
+    public void initData(){
+        GetMyQuestListAsyncTask asyncTask = new GetMyQuestListAsyncTask(MyQuest.this,listQuest);
+        asyncTask.execute();
     }
 }

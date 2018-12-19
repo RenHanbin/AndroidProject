@@ -7,4 +7,5 @@
     <dimen name="mytext">16dp</dimen>
     <dimen name="daohang">20dp</dimen>
     <dimen name="biaoti">50dp</dimen>
+    <dimen name="list">340dp</dimen>
 </resources>

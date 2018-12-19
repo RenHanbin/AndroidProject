@@ -11,4 +11,8 @@
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>-->
     </style>
+    <style name="MyEditText">
+        <item name="android:colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">#ffffff</item>
+    </style>
 </resources>

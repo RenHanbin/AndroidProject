@@ -8,5 +8,9 @@
         <item name="colorAccent">#a3a3a3</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+    <style name="MyEditText">
+        <item name="android:colorControlNormal">#ffffff</item>
+        <item name="android:colorControlActivated">#ffffff</item>
+    </style>
 
 </resources>

@@ -1,16 +1,23 @@
 package com.example.celia.demo1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TabHost;
@@ -22,8 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.example.celia.demo1.R.color.themeColor;
-
 
 public class FragmentTab2 extends Fragment {
     private ListView listGuan;
@@ -31,6 +36,7 @@ public class FragmentTab2 extends Fragment {
     private List<Map<String,Object>> datalist;
     private List<Map<String,Object>> datalist2;
 
+    TabHost tabHost;
 
     //创建View时调用
     @Nullable
@@ -38,10 +44,8 @@ public class FragmentTab2 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page2,container,false);//根据布局文件产生布局控件
         //false 不放到第二个参数中，true 放到第二个参数中
-
         //1.获取TabHost控件
-        final TabHost tabHost=view.findViewById(android.R.id.tabhost);
-
+        tabHost=view.findViewById(android.R.id.tabhost);
         //2.TabHost初始化
         tabHost.setup();
         //3.添加选项卡
@@ -49,13 +53,12 @@ public class FragmentTab2 extends Fragment {
                 .setIndicator("关注")
                 .setContent(R.id.tab1));
         tabHost.addTab(tabHost.newTabSpec("tab2")
-                .setIndicator("热点问题")
+                .setIndicator("热门问题")
                 .setContent(R.id.tab2));
-        //设置Tab变换时的监听事件
+        updateTab(tabHost);
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
-                //当点击tab选项卡的时候，更改当前的背景
                 updateTab(tabHost);
             }
         });
@@ -75,21 +78,12 @@ public class FragmentTab2 extends Fragment {
                 Toast.makeText(getActivity(),"搜索",Toast.LENGTH_SHORT).show();
             }
         });
+
+        //点击list其中的一项，跳转
+
         return view;
     }
-    private void updateTab(final TabHost tabHost) {
-        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
-            View view = tabHost.getTabWidget().getChildAt(i);
-            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-            tv.setTextSize(18);
-            tv.setTypeface(Typeface.SERIF, 1); // 设置字体微风格
-            if (tabHost.getCurrentTab() == i) {//选中
-                tv.setTextColor(Color.parseColor("#3ac9bf"));
-            } else {//不选中
-                tv.setTextColor(Color.parseColor("#a3a3a3"));
-            }
-        }
-    }
+
 
     //当view创建完成
     @Override
@@ -97,6 +91,7 @@ public class FragmentTab2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
+    /*适配器*/
     public class CustomAdapter extends BaseAdapter {
 
         private Context context;
@@ -189,6 +184,7 @@ public class FragmentTab2 extends Fragment {
             return convertView;
         }
     }
+    /*初始化数据*/
     private void initData() {
         int[] icon = {R.drawable.p1,R.drawable.p2,R.drawable.p3,R.drawable.p2,R.drawable.p3};
         int[] icon1 = {R.drawable.dianzan,R.drawable.dianzan,R.drawable.dianzan,R.drawable.dianzan,R.drawable.dianzan};
@@ -222,6 +218,19 @@ public class FragmentTab2 extends Fragment {
             datalist2.add(map);
         }
     }
-
+   /* tab颜色*/
+    private void updateTab(final TabHost tabHost) {
+        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+            View view = tabHost.getTabWidget().getChildAt(i);
+            TextView tv = (TextView) tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            tv.setTextSize(18);
+            tv.setTypeface(Typeface.SERIF, 1); // 设置字体微风格
+            if (tabHost.getCurrentTab() == i) {//选中
+                tv.setTextColor(Color.parseColor("#3ac9bf"));
+            } else {//不选中
+                tv.setTextColor(Color.parseColor("#a3a3a3"));
+            }
+        }
+    }
 
 }

@@ -35,6 +35,8 @@
                 android:layout_marginLeft="10dp">
                 <!--登录人的姓名-->
                 <TextView
+                    android:textSize="18dp"
+                    android:layout_marginLeft="20dp"
                     android:id="@+id/tv_user_name"
                     android:text="米开朗琪罗"
                     android:textStyle="bold"
@@ -44,13 +46,14 @@
                     />
                 <!--登录人的星级-->
                 <TextView
+                    android:textSize="12dp"
                     android:id="@+id/tv_user_grade"
                     android:text="星级：LV4"
                     android:textColor="#ffffff"
                     android:background="@drawable/star_corner"
                     android:layout_marginLeft="20dp"
                     android:paddingLeft="10dp"
-                    android:layout_width="100dp"
+                    android:layout_width="80dp"
                     android:layout_height="25dp"
                     android:gravity="center_vertical"/>
             </LinearLayout>

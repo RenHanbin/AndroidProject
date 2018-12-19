@@ -1,9 +1,11 @@
 package com.example.celia.demo1.my;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,17 +15,32 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.celia.demo1.FragmentTab2;
-import com.example.celia.demo1.R;
 
+import com.example.celia.demo1.R;
+import com.example.celia.demo1.bean.Article;
+import com.example.celia.demo1.bean.Answer;
+import com.example.celia.demo1.bean.Comm;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class MyComm extends AppCompatActivity {
     private ListView listComm;
-    private List<Map<String,Object>> datalist;
+    private List<Comm> datalist;
+    private ListViewAdapter adapter;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +49,6 @@ public class MyComm extends AppCompatActivity {
 
         listComm= findViewById(R.id.lv_my_comments);
         initData();
-        CustomAdapter adapter=new CustomAdapter(this,R.layout.my_comments,datalist);
-        listComm.setAdapter(adapter);
 
         //点击“<”，返回上一级界面我的my
         ImageView Ireturn=findViewById(R.id.iv_return);
@@ -44,14 +59,14 @@ public class MyComm extends AppCompatActivity {
             }
         });
     }
-    public class CustomAdapter extends BaseAdapter {
+    public class ListViewAdapter extends BaseAdapter {
 
         private Context context;
         private int itemLayoutID;
-        private List<Map<String,Object>> datalist;
-        public CustomAdapter(Context context,
+        private List<Comm> datalist;
+        public ListViewAdapter(Context context,
                              int itemLayoutID,
-                             List<Map<String,Object>>datalist){
+                             List<Comm>datalist){
             this.context=context;
             this.itemLayoutID=itemLayoutID;
             this.datalist=datalist;
@@ -76,27 +91,75 @@ public class MyComm extends AppCompatActivity {
                 LayoutInflater inflater=LayoutInflater.from(context);
                 convertView=inflater.inflate(itemLayoutID,null);
             }
-            TextView textView1 = convertView.findViewById(R.id.tv_title);
-            TextView textView2 = convertView.findViewById(R.id.tv_comment);
-            TextView textView3 = convertView.findViewById(R.id.tv_time);
-            Map<String, Object> map = datalist.get(position);
-            textView1.setText((String) map.get("title"));
-            textView2.setText((String) map.get("comment"));
-            textView3.setText((String) map.get("time"));
+            TextView commTitle = convertView.findViewById(R.id.tv_title);
+            TextView comment = convertView.findViewById(R.id.tv_comment);
+            TextView commTime = convertView.findViewById(R.id.tv_time);
+            Comm comm = datalist.get(position);
+            //如何判断到底是answerContent还是articleTitle
+            commTitle.setText(comm.getArticleTitle());
+            comment.setText(comm.getCommentContent());
+            commTime.setText(comm.getCommentTime());
             return convertView;
         }
     }
-    private void initData() {
-        String[] name1 = {"不可摸数-HDU 1999","实习手札|我与360","不可摸数-HDU 1999","实习手札|我与360","实习手札|我与360"};
-        String[] name2 = {"内容1","内容2","内容3","内容4","内容5"};
-        String[] name3 = {"01:12:01", "20:12:01", "23:02:02", "00:50:50", "03:09:05"};
-        datalist = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i < 5; i++) {
-            Map<String, Object> map = new HashMap<String, Object>();
-            map.put("title", name1[i]);
-            map.put("comment", name2[i]);
-            map.put("time", name3[i]);
-            datalist.add(map);
+
+    //创建异步任务类
+    class GetMyCommListAsyncTask extends AsyncTask<String,Void,List<Comm>>{
+        private Context cContext;
+        private ListView listView;
+        public GetMyCommListAsyncTask(Context cContext,ListView listView){
+            this.cContext = cContext;
+            this.listView = listView;
         }
+
+        @Override
+        protected List<Comm> doInBackground(String... strings) {
+            String path=getResources().getString(R.string.url_path);
+            String urlStr = path+"MyCommentServlet?remark=getMyCommentList";
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("contentType", "utf-8");//解决给服务器端传输的乱码问题
+                InputStream inputStream = connection.getInputStream();
+                //字节流转字符流
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);//转换流
+                BufferedReader reader = new BufferedReader(inputStreamReader);//字符流
+                String str = reader.readLine();
+                Log.e("test1", str);
+                //解析jsonarray
+                JSONArray array = new JSONArray(str);
+                datalist = new ArrayList<>();
+                for(int i = 0;i < array.length(); ++i){
+                    JSONObject object1 = array.getJSONObject(i);
+                    Comm comm = new Comm();
+                    comm.setCommentId(object1.getInt("commentId"));
+                    comm.setCommentContent(object1.getString("commentContent"));
+                    comm.setCommentTime(object1.getString("commentTime"));
+//                    comm.setAnswerContent(object1.getString("answerContent"));
+                    comm.setArticleTitle(object1.getString("articleTitle"));
+                    datalist.add(comm);
+                    Log.e("test1","datalisttththf");
+                }
+                Log.e("test1",datalist.toString());
+                return datalist;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        protected void onPostExecute(List<Comm> result) {
+            Log.e("testtsfdssd", "异步类显示");
+            adapter = new ListViewAdapter(cContext,R.layout.my_comments,result);
+            listView.setAdapter(adapter);
+        }
+    }
+
+    private void initData() {
+        GetMyCommListAsyncTask asyncTask = new GetMyCommListAsyncTask(MyComm.this,listComm);
+        asyncTask.execute();
     }
 }

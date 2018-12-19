@@ -69,7 +69,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                     <ListView
                         android:id="@+id/lv_guanzhu"
                         android:layout_width="match_parent"
-                        android:layout_height="448dp"/>
+                        android:layout_height="480dp"/>
                 </LinearLayout>
                 <!--热门问题页面-->
                 <LinearLayout
@@ -90,7 +90,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                         <TextView
                             android:layout_weight="10"
                             android:text="热门问题"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textStyle="bold"
                             android:layout_width="0dp"
                             android:layout_height="32dp" />
@@ -103,6 +103,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             </FrameLayout>
         </RelativeLayout>
     </TabHost>
+
 </LinearLayout>
 </LinearLayout>
 

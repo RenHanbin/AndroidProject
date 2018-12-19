@@ -1,5 +1,6 @@
 package com.example.celia.demo1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.celia.demo1.index.Derection;
+import com.example.celia.demo1.index.HotMajor;
+import com.example.celia.demo1.index.IndexJobs;
+import com.example.celia.demo1.index.IndexLearn;
+import com.example.celia.demo1.index.IndexScore;
+import com.example.celia.demo1.index.MajorProspect;
+import com.example.celia.demo1.index.PaimingSchool;
+import com.example.celia.demo1.index.RegionalEconomy;
+import com.example.celia.demo1.index.RegionalProfile;
+import com.example.celia.demo1.index.Select;
+import com.example.celia.demo1.index.UniversityIntroduce;
+import com.example.celia.demo1.index.paiming;
 
 public class FragmentTab1 extends Fragment{
     private ImageView learn;
@@ -68,50 +82,86 @@ public class FragmentTab1 extends Fragment{
             switch (v.getId()){
                 case R.id.iv_learn:{
                     Log.e("test","专业介绍");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),IndexLearn.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_stats:{
-                    Log.e("test","排名一览");
+                    Log.e("test","专业排名一览");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),paiming.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_job:{
-                    Log.e("test","就业前景");
+                    Log.e("test","专业就业前景");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),MajorProspect.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_hot:{
-                    Log.e("test","热门专业");
+                    Log.e("test","专业热门专业");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),HotMajor.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_school:{
-                    Log.e("test","大学介绍");
+                    Log.e("test","学校学校介绍");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),UniversityIntroduce.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_stats1:{
-                    Log.e("test","排名一览");
+                    Log.e("test","学校排名一览");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),PaimingSchool.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_derection:{
-                    Log.e("test","就业方向");
+                    Log.e("test","学校就业方向");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),Derection.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_select:{
-                    Log.e("test","估分择校");
+                    Log.e("test","学校估分择校");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),Select.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_area:{
-                    Log.e("test","地区简介");
+                    Log.e("test","地区介绍");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),RegionalProfile.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_eco:{
                     Log.e("test","地区经济");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),RegionalEconomy.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_jobs:{
                     Log.e("test","地区就业");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),IndexJobs.class);
+                    startActivity(intent);
                     break;
                 }
                 case R.id.iv_score:{
                     Log.e("test","地区分数线");
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity().getApplicationContext(),IndexScore.class);
+                    startActivity(intent);
                     break;
                 }
             }

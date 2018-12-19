@@ -1,67 +1,32 @@
 package com.example.celia.demo1;
 
-import android.graphics.Color;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.Handler;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Window;
-import android.widget.ImageView;
-import android.widget.TabHost;
-import android.widget.TextView;
+
+import com.example.celia.demo1.initActivities.LoginActivity;
+
 
 public class MainActivity extends AppCompatActivity {
-
-    private FragmentTabHost tabHost;// 声明FragmentTabhost控件
-    private int[] tabHostIconNormal = {R.drawable.home_normal,R.drawable.comunicate_normal,R.drawable.msg_normal,R.drawable.my_normal};
-    private int[] tabHostIcon = {R.drawable.home,R.drawable.comunicate,R.drawable.msg,R.drawable.my};
-    private String[] tabHostText={"首页","社区","资讯","我的"};
-    private Class[] fragmentArr = {FragmentTab1.class,FragmentTab2.class,FragmentTab3.class,FragmentTab4.class};
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
-
-        //初始化FragmentTabHost
-        initTabHost();
-        updateTab(tabHost);
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+        setContentView(R.layout.init_layout);
+        Log.e("test", "开始加载初始化页面");//点击登录按钮的时候发生的操作
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onTabChanged(String tabId) {
-                for (int i = 0; i < fragmentArr.length; i++) {//颜色全部重置
-                    ((TextView) tabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.tv_text)).setTextColor(Color.parseColor("#a3a3a3"));
-                    ((ImageView) tabHost.getTabWidget().getChildTabViewAt(i).findViewById(R.id.iv_image)).setImageResource(tabHostIconNormal[i]);
-                }
-                updateTab(tabHost);
+            public void run() {
+                Intent mainIntent = new Intent(MainActivity.this, LoginActivity.class);
+                MainActivity.this.startActivity(mainIntent);
+                MainActivity.this.finish();
             }
-        });
-
+        }, 3000);
     }
 
-    private void updateTab(TabHost tabHost) {
-        int curr = tabHost.getCurrentTab();
-        View view = tabHost.getTabWidget().getChildAt(curr);
-        TextView textView = view.findViewById(R.id.tv_text);
-        ImageView imageView = view.findViewById(R.id.iv_image);
-        imageView.setImageResource(tabHostIcon[curr]);
-        textView.setTextColor(Color.parseColor("#3ac9bf"));
-    }
-
-    private void initTabHost() {
-        tabHost = findViewById(android.R.id.tabhost);
-        tabHost.setup(this,getSupportFragmentManager(),android.R.id.tabhost);
-        for(int i=0;i<fragmentArr.length;i++){
-            TabHost.TabSpec tabSpec = tabHost.newTabSpec(tabHostText[i]).setIndicator(getTabHostView(i));
-            tabHost.addTab(tabSpec,fragmentArr[i],null);
-        }
-    }
-    private View getTabHostView(int index){
-        View view = getLayoutInflater().inflate(R.layout.fragment_tab,null);
-        TextView textView = view.findViewById(R.id.tv_text);
-        ImageView imageView = view.findViewById(R.id.iv_image);
-        textView.setText(tabHostText[index]);
-        imageView.setImageResource(tabHostIconNormal[index]);
-        return view;
-    }
 }
