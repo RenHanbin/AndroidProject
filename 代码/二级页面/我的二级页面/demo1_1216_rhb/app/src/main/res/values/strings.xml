@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">demo1</string>
+    <string name="url_path">http://10.7.88.222:8080/go2school/</string>
+</resources>
