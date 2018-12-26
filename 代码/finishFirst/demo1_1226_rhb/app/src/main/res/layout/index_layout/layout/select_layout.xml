@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_school_name"
+        android:gravity="center"
+        android:text="学校"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_num"
+        android:gravity="center"
+        android:text="招生人数"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_min_score"
+        android:gravity="center"
+        android:text="最低分数"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_min_paiming"
+        android:gravity="center"
+        android:text="最低排名"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="40dp" />
+</LinearLayout>
