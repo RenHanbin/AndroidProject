@@ -1,4 +1,4 @@
-package com.example.celia.demo1.initActivities;
+﻿package com.example.celia.demo1.initActivities;
 
 import android.content.Context;
 import android.content.Intent;
