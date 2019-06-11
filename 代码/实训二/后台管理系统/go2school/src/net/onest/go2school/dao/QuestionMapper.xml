@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.onest.go2school.dao.QuestionMapper">
+
+<!-- 配置结果映射，就是表里面的字段赋给类中的那个属性 -->
+<resultMap type="Question" id="questionMap">
+	<id column="question_id" property="questionId"></id>
+	<result column="question_title" property="questionTitle"/>
+	<result column="question_describe" property="questionDiscribe"/>
+	<result column="question_time" property="questionTime"/>
+	<result column="question_img" property="questionImg"/>
+	
+	<association property="questionUser"
+			 resultMap="net.onest.go2school.dao.UserMapper.userMap">
+	</association>
+</resultMap>
+	<!-- 查询所有问题-->
+	<select id="findAllQuestions" resultMap="questionMap">
+		select * from question;
+	</select>
+	<!-- 模糊查询 -->
+	<select id="findQuestionByLike" resultMap="questionMap">
+		select * from question where question_title like "%"#{str}"%"
+	</select>
+	<!-- 删除问题 -->
+	<delete id="deleteQuestion">
+		delete from question where question_id=#{questionId}
+	</delete>
+</mapper>

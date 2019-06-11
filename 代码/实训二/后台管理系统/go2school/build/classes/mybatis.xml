@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
+<configuration>
+
+<!-- settings:通用设置：延迟加载，缓存，日志显示的方式 -->
+	<settings>
+	<!-- 表示在控制台输出sql语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<typeAliases>
+		<!-- <typeAlias type="entity.User" alias="User" /> -->
+		<package name="net.onest.go2school"/>
+	</typeAliases>
+	
+
+</configuration>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.onest.go2school.dao.ShopMapper">
+
+<!-- 配置结果映射，就是表里面的字段赋给类中的那个属性 -->
+<resultMap type="Shop" id="shopMap">
+	<id column="shop_id" property="shopId"></id>
+	<result column="shop_name" property="shopName"/>
+	<result column="shop_link" property="shopLink"/>
+	<result column="shop_settling_time" property="shopSettlingTime"/>
+	<result column="shop_notes" property="shopNotes"/>
+</resultMap>
+<!-- resultType可以指定为上面resultmap中指定的情况 -->
+	<select id="findAllShops" resultMap="shopMap">
+		select * from shop;
+	</select>
+	<select id="findShopById" resultMap="shopMap">
+		 select * from shop where shop_id=#{shopId} 
+	</select>
+	
+	<!-- 修改商铺信息 -->
+	<update id="updateShopById">
+		update shop 
+		set shop_name=#{shopName},
+		shop_link=#{shopLink},
+		shop_settling_time=#{shopSettlingTime},
+		shop_notes=#{shopNotes} 
+		where shop_id=#{shopId}
+	</update>
+	
+	
+	<!-- 模糊查询 -->
+	<select id="findShopByLike" resultMap="shopMap">
+		select * from shop where shop_name like "%"#{shopLikeName}"%"
+	</select>
+	<!-- 删除问题 -->
+	<delete id="deleteShopById">
+		delete from shop where shop_id=#{shopId}
+	</delete>
+	
+	<!-- 添加商铺 -->
+	<insert id="insertShop">
+		insert into 
+		shop(shop_name,shop_link,shop_settling_time,shop_notes) 
+		values(#{shopName},#{shopLink},#{shopSettlingTime},#{shopNotes})
+	</insert>
+
+</mapper>

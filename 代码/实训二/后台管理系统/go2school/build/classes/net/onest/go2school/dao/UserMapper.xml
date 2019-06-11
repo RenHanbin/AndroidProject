@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.onest.go2school.dao.UserMapper">
+
+<!-- 配置结果映射，就是表里面的字段赋给类中的那个属性 -->
+<resultMap type="User" id="userMap">
+	<id column="user_id" property="userId"></id>
+	<result column="user_name" property="userName"/>
+	<result column="user_password" property="userPassword"/>
+	<result column="user_email" property="userEmail"/>
+	<result column="user_sex" property="userSex"/>
+	<result column="user_img" property="userImg"/>
+	<result column="user_tel" property="userTel"/>
+</resultMap>
+<!-- resultType可以指定为上面resultmap中指定的情况 -->
+	<select id="findAllUsers" resultMap="userMap">
+		select * from user;
+	</select>
+	
+	 <select id="findUserById" resultMap="userMap">
+		 select user_id, user_name, user_password, user_email, user_sex, user_tel, user_img, user_balance,count(followed_user_id) "userAtten"
+		 from user 
+		 left join follow on user_id = followed_user_id
+		 where user_id=#{userId} 
+	</select>
+	<select id="findUserById1" resultMap="userMap">
+		 select user_id, user_name, user_password, user_email, user_sex, user_tel, user_img, user_balance,count(follow_user_id) "userFans"
+		 from user 
+		 left join follow on user_id = follow_user_id
+		 where user_id=#{userId} 
+	</select>
+	<select id="findUserById2" resultMap="userMap">
+		 select *
+		 from user
+		 where user_id=#{userId} 
+	</select>
+	
+	<select id="findfollowListById" resultMap="userMap">
+		select user_id, user_name, user_password, user_email, user_sex, user_tel, user_img, user_balance,follow_user_id "userAtten"
+		 from user 
+		 left join follow on user_id = followed_user_id
+		 where user_id=#{userId} 
+	</select>
+	 
+	
+	<update id="updateUser">
+		update user set 
+		user_name=#{userName},
+		user_password=#{userPassword},
+		user_email=#{userEmail},
+		user_sex=#{userSex},
+		user_tel=#{userTel}
+		where user_id=#{userId}
+	</update>
+
+</mapper>

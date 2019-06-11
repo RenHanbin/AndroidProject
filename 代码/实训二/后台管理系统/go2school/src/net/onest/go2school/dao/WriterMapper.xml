@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.onest.go2school.dao.WriterMapper">
+
+<!-- 配置结果映射，就是表里面的字段赋给类中的那个属性 -->
+<resultMap type="Writer" id="writerMap">
+	<id column="writer_id" property="writerId"></id>
+	<result column="writer_name" property="writerName"/>
+	<result column="writer_img" property="writerImg"/>
+</resultMap>
+
+</mapper>
